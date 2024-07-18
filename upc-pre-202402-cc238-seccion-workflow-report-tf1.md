@@ -12,8 +12,8 @@
             <th> Código </th>
         </tr>
         <tr>
-            <th> Neyra Santa Cruz, Marcelo Sebastian </th>
-            <th> U202217241 </th>
+            <td> Neyra Santa Cruz, Marcelo Sebastian </td>
+            <td> U202217241 </td>
         </tr>
     </table>
     <h5> 2024-02 </h5>
@@ -32,7 +32,7 @@
         1.2.2.2. Lean UX Assumptions
         1.2.2.3. Lean UX Hypothesis Statements
         1.2.2.4. Lean UX Canvas
-    1.2.3 Segmentos objetivo
+##### [1.2.3 Segmentos objetivo](#segmentos-objetivos)
 
 ---
 
@@ -193,11 +193,208 @@ Para poder desarrollar adecuadamente nuestro caso, utilizaremos la técnica “5
 
     * El mayor desafío es la gestión de equipos. Mantener la comunicación entre áreas es difícil, principalmente con herramientas como WhatsApp, Zoom o Microsoft Teams. Entre algunos problemas adicionales, son evidentes la falta de capacitación (33%), riesgos de pérdida de información (11%) y recursos insuficientes (8%).
 
-<br>
 
 - Segmento: Estudiantes
-    Según el diario Gestión (2024), en Perú en el año 2019, alrededor del 9% de estudiantes decidían llevar sus estudios de manera 100% virtual; mientras que, en el año 2022, este porcentaje aumentó a 50%, número la cuál fue bajando progresivamente hasta llegar a la actualidad, en donde se mantiene con un 9%.
+    * Según el diario Gestión (2024), en Perú en el año 2019, alrededor del 9% de estudiantes decidían llevar sus estudios de manera 100% virtual; mientras que, en el año 2022, este porcentaje aumentó a 50%, número la cuál fue bajando progresivamente hasta llegar a la actualidad, en donde se mantiene con un 9%.
+    
+    * La razón por la gran reducción del porcentaje es, además de volver a la presencialidad, debido a que los alumnos consideran que las clases presenciales son significativamente mejores que las virtuales. Según el diario El Comercio (2022), la mayoría de los alumnos destacan que es mucho más sencillo concentrarse en una sesión presencial a una virtual, ya que es más fácil organizar su tiempo para separar la hora de estudio a la de entretenimiento.
+    
+    * En lo que respecta a la organización del tiempo, un experimento realizado por Cabero, García y López (2020) nos muestra una interesante diferencia entre los estudiantes que no cuentan con herramientas para gestionar su tiempo, aquellos que cuentan con una (que en este caso es una barra de tareas) y aquellos que cuentan con dos (la barra de tareas y el tiempo empleado en el estudio). Se notó que los estudiantes que contaban solo con una herramienta emplearon alrededor de 50% menos tiempo que los otros dos grupos, aunque en los 3 grupos los estudiantes obtuvieron notas similares.
 
-La razón por la gran reducción del porcentaje es, además de volver a la presencialidad, debido a que los alumnos consideran que las clases presenciales son significativamente mejores que las virtuales. Según el diario El Comercio (2022), la mayoría de los alumnos destacan que es mucho más sencillo concentrarse en una sesión presencial a una virtual, ya que es más fácil organizar su tiempo para separar la hora de estudio a la de entretenimiento.
+#### 1.2.2 Lean UX Process
+##### 1.2.2.1. Lean UX Problem Statements
+- **Problem Statement 1**
 
-En lo que respecta a la organización del tiempo, un experimento realizado por Cabero, García y López (2020) nos muestra una interesante diferencia entre los estudiantes que no cuentan con herramientas para gestionar su tiempo, aquellos que cuentan con una (que en este caso es una barra de tareas) y aquellos que cuentan con dos (la barra de tareas y el tiempo empleado en el estudio). Se notó que los estudiantes que contaban solo con una herramienta emplearon alrededor de 50% menos tiempo que los otros dos grupos, aunque en los 3 grupos los estudiantes obtuvieron notas similares.
+    <p style="text-align: justify">
+        Nuestra aplicación “Task Management” fue diseñada para lograr una mejor organización y coordinación en los proyectos desarrollados en línea. A través de nuestro servicio, los equipos de teletrabajo podrán crear y visualizar proyectos y tareas para tener seguimiento de los trabajos que deben realizar.
+    </p>
+
+    <p style="text-align: justify">
+        Hemos observado que muchos de nuestros clientes tienen problemas para darle seguimiento a las tareas que se realizan en el equipo. Actualmente, los usuarios están utilizando herramientas externas que les permita llevar el seguimiento de los trabajos.
+    </p>
+    <p style="text-align: justify">
+        ¿Cómo podemos mejorar el seguimiento de tareas para que los equipos de teletrabajo tengan una mejor eficacia en el desarrollo de su trabajo?
+    </p>
+- **Problem Statement 2**
+    <p style="text-align: justify">
+        Nuestra aplicación Workflow fue diseñada para brindar apoyo en la gestión de tareas y asignaciones para los estudiantes. A través de nuestro servicio, los estudiantes pueden administrar las tareas utilizando un sencillo calendario que puede configurar en cualquier momento.
+    </p>
+    
+    <p style="text-align: justify">
+        Hemos notado que muchos de nuestros clientes tienen problemas para recordar la presentación de las tareas que fueron agregadas al calendario. Actualmente, los usuarios están utilizando herramientas externas que les permita recordar sobre una tarea que está en el calendario.
+    </p>
+        
+    <p style="text-align: justify">
+        ¿Cómo podemos mejorar el calendario para que los estudiantes puedan recordar con mayor facilidad la fecha de entrega de las tareas?
+    </p>
+    
+###### 1.2.2.2. Lean UX Assumptions
+
+- **Business Assumptions**
+
+    1. **Creo que mis clientes necesitan** conocer la manera más adecuada de organizar sus proyectos y trabajos para garantizar un buen flujo de trabajo.
+
+    2. **Estas necesidades se pueden resolver con** un sistema sencillo de utilizar que permita el seguimiento de los proyectos y tareas mediante un calendario.
+
+    3. **Mis clientes son** los estudiantes escolares y universitarios, al igual que líderes y miembros de equipos de teletrabajo que necesiten una mejor organización de su trabajo
+    
+    4. **El valor N.°1 que mi cliente quiere de mi servicio es** mejorar su organización de sus tareas o proyectos y, por lo tanto, aumentar su eficiencia y productividad
+
+    5. **El cliente también puede adquirir estos beneficios adicionales mediante** un plan de suscripción mensual que permita obtener funcionalidades más especializadas y completas a lo largo del uso del servicio
+    
+    6. **Voy a adquirir a la mayoría de mis clientes** mediante la difusión de anuncios en plataformas de redes sociales donde se explique nuestra oferta de solución y las ventajas en comparación con la competencia, incluyendo nuestro enfoque empresarial favorable para las personas que necesiten una mejor organización.
+    
+    7. **Haré dinero a través de** publicidad que se encuentra adentro de la aplicación y, especialmente, a través del plan de suscripción mensual que los usuarios pueden optar en comprar para acceder a funcionalidades más especializadas que los ayuden a realizar un trabajo más organizado.
+    
+    8. **Mi competencia principal en el mercado serán** las aplicaciones enfocadas en la calendarización de actividades y seguimiento de tareas y trabajos.
+    
+    9. **Los venceremos debido a** la implementación de diversas características de aplicación de organización dentro de un mismo ambiente (WorkFlow application), complementándose entre sí y ofreciendo estos servicios a los estudiantes escolares y universitarios y los líderes y miembros de equipos de teletrabajo sin necesidad de que realicen una inversión inicial.
+    
+    10. **Mi mayor riesgo de producto es** la posibilidad de que se presenten problemas de conexión entre los al momento de utilizar nuestra aplicación y, por lo tanto, no se envíe la información de los usuarios correctamente, afectando la experiencia de usuario.
+    
+    11. **Resolveremos esto a través del** uso de servidores de iCloud Computing y Big Data, los cuales son seguros y confiables con relación a la información gestionada y la considerable cantidad que esta puede abarcar.
+
+- **User Assumptions**
+
+    1. **¿Quién es el usuario?**
+        Los usuarios de Task Management constituyen en estudiantes escolares y universitarios y líderes y miembros de equipos de teletrabajo que buscan una solución que les permita gestionar sus tareas proyectos de manera eficiente y colaborativa.
+
+    2. **¿Dónde encaja nuestro producto, en su trabajo o vida?**
+        Este producto se adapta perfectamente a la dinámica laboral para los equipos de teletrabajo y la dinámica escolar para los estudiantes escolares y universitarios que están en la búsqueda de una plataforma en línea. Esta plataforma les permite no solo administrar sus proyectos o tareas de manera efectiva, sino también mejorar significativamente la comunicación y la coordinación entre todos los miembros del equipo. Además, facilita un seguimiento preciso del progreso y una asignación de tareas altamente eficiente.
+
+    3. **¿Qué problemas tiene nuestro producto y cómo se pueden resolver?**
+    Al utilizar nuestra aplicación, es posible encontrarse con ciertos inconvenientes. Entre los más importantes, podemos destacar la dependencia de contar con una conexión estable a internet y la presentación de errores al momento de cargar archivos para su envío a otro miembro del equipo. Ante estos problemas, recomendamos contar con una conexión sólida a internet, especialmente si se desea cargar rápidamente y sin problemas los archivos adjuntos, y respaldar los archivos importantes con copias de seguridad.
+
+    4. **¿Cuándo y cómo es usado nuestro producto?**
+    Nuestra aplicación tiene un uso diario. Sea el usuario un estudiante, un miembro o líder de equipo, Task Management puede utilizarse diariamente para asegurarse de contar con un eficiente flujo de trabajo y mantener una buena organización con los trabajos y las tareas asignadas.
+
+    5. **¿Qué características son importantes?**
+    Las características clave de Task Management incluyen la integración de herramientas de seguimiento de tareas, gestión de calendarios y fechas límite y la capacidad de compartir y adjuntar archivos.
+
+    6. **¿Cómo debe verse nuestro producto y cómo debe comportarse?**
+    La plataforma debe tener un espacio intuitivo, contemporáneo y que pueda manejarse sencillamente sin presentarle problemas constantemente al usuario. Es imperativo que funcione sin errores y asegure una comunicación efectiva entre todos los miembros del equipo.
+
+###### 1.2.2.3. Lean UX Hypothesis Statements
+
+- **Hypothesis Statement 1**
+
+    Creemos que permitir al usuario visualizar todas las tareas o trabajos que tiene pendiente ayudará a la organización del desarrollo de estos
+
+    Sabremos que tendremos éxito
+
+    Cuando el porcentaje de uso de la opción “Visualizar Barra de Progreso de Tareas” aumente en un 30%
+
+- **Hypothesis Statement 2**
+    Creemos que mostrar ocasionalmente las notificaciones y recordatorios mantendrán informado al usuario acerca de las actividades que debe realizar
+
+    Sabremos que hemos tenido éxito.
+
+    Cuando más del 70% usuarios utilicen la opción de “calendarización de actividades” y se sientan seguros de que la herramienta cumple eficazmente su labor y logran realizar sus deberes a tiempo.
+
+- **Hypothesis Statement 3**
+    Creemos que ofrecer actualizaciones constantes que incluyan nuevas funcionalidades y entornos mantendrá nuestra aplicación relevante en el mercado peruano
+
+    Sabremos que hemos tenido éxito
+
+    Cuando nuestro producto ocupe un 20% del mercado nacional.
+    
+###### 1.2.2.4. Lean UX Canvas
+<table>
+<tr>
+    <th> Lean Ux Canvas </th>
+    <th> Task Management Group </th>
+    <th> ??/08/2024 </th>
+</tr>
+<tr>
+<th> BUSINESS PROBLEM </th>
+<th> SOLUTION IDEAS </th>
+<th> BUSINESS OUTCOME </th>
+<tr>
+<tr>
+    <!-- BUSINESS PROBLEM -->
+    <td>
+        <p style="color: blue"> LA SITUACIÓN: <p> 
+        <p> Ofrecemos un apoyo de gestión a los estudiantes y equipos de teletrabajo </p>
+        <p style="color: blue"> LOS PROBLEMAS COMUNES: </p> 
+        <div style="text-align: justify">
+            <p> Falta de herramientas para las reuniones virtuales </p> 
+            <p> Calendario de tareas ineficiente </p> 
+        </div>
+        <p style="color: blue"> LAS PREGUNTAS: </p>
+        <div style="text-align: justify"> 
+            <p> ¿Qué podemos ayudar a nuestro cliente para que pueda satisfacer sus necesidades? </p>
+        </div>
+    </td>
+    <!-- SOLUTION IDEAS -->
+    <td>
+        <div style="text-align: justify">
+            <ul> 
+                <li> Ofrecer un asistente virtual que indique cómo funciona la aplicación </li> 
+                <li> Las plantillas y diseños se adecuan al cliente, según su preferencia</li> 
+                <li> Incrementar el ancho de banda del servidor para mejorar el rendimiento de la app </li> 
+                <li> Mejorar el algoritmo y capacidad del servidor para que soporte más personas </li>
+            </ul>
+        </div>
+    </td>
+    <!-- BUSINESS OUTCOME -->
+    <td>
+        <div style="text-align: justify">
+            <p> Mejorar periódicamente el software para ofrecer una mejor experiencia al usuario </p>
+            <p> Ayudar a los equipos de teletrabajo a ser más productivos y eficientes </p>
+            <p> Alcanzar mejores reseñas de los usuarios </p>
+        </div>
+    </td>
+</tr>
+<tr>
+    <th colspan="3"> Usuario y clientes </th>
+</tr>
+<tr style="text-align: center">
+    <td colspan="2"> Equipos de teletrabajo </td>
+    <td colspan="1"> Estudiantes </td>
+</tr>
+<!-- Equipos de teletrabajo -->
+<tr style="text-align: justify">
+    <td>
+         <p> Líder de equipo de teletrabajo que necesite ayuda en la gestión de su equipo de teletrabajo asignado <p>
+    </td>
+    <td>
+         <p> Miembro de equipo de teletrabajo que actualmente esté insatisfecho con la comunicación con su equipo <p>
+    </td>
+    <td>
+        <p> Estudiantes escolares o universitarios que con problemas de gestión de tiempo para realizar sus tareas </p>
+    </td>
+</tr>
+<tr>
+    <th> Hipótesis </th>
+    <th> La cosa más importante que debemos aprender primero</th>
+    <th> Mínima cantidad de trabajo para aprender lo siguiente más importante</th>
+</tr>
+<tr style="text-align: justify">
+    <td>
+        <p> Creemos que implementar funcionalidades diseñadas para fomentar la organización será la clave del éxito de nuestra aplicación en la gestión y organización de un equipo de teletrabajo.</p>
+        <p>Sabremos que hemos tenido éxito. </p>
+        <p>Cuando las ventas de nuestro plan de suscripción aumenten en un 50%</p>
+    </td>
+    <td>
+        <ul>
+            <li>Las personas están dispuestas a realizar cambios si es que estos los beneficiará </li>
+            <li>Cualquier actualización a la aplicación NO debe perjudicar la accesibilidad del usuario </li>
+        </ul>
+    </td>
+    <td>
+        <ul>
+            <li> Entrevistar a los miembros y líderes de equipo de teletrabajo de distintas empresas para comprender sus necesidades </li>
+            <li> Hacer un análisis de mercado para conocer a nuestra competencia </li>
+            <li> Analizar la cantidad de estudiantes escolares y universitarios que presentan problemas con la presentación de tareas </li>
+        </ul>
+    </td>
+</tr>
+</table>
+
+##### <a name="segmentos-objetivos"></a> 1.2.3 Segmentos objetivo
+
+###### 1. EQUIPOS DE TELETRABAJO: 
+Conformados por un líder y varios miembros, dispersos geográficamente y que necesiten una herramienta para coordinar, colaborar y hacer un seguimiento del progreso del proyecto de manera efectiva.
+
+###### 2. ESTUDIANTES: 
+Escolares y universitarios que presenten problemas con la organización para realizar sus tareas.
