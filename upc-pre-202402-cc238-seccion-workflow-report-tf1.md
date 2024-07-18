@@ -1,4 +1,4 @@
-<div style="align: center">
+<div align: "center">
     <h1> Universidad Peruana de Ciencias Aplicadas </h1>
     <h2> Aplicaciones para Dispositivos Móviles</h2>
     <h3>Sección: </h3>
