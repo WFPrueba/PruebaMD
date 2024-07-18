@@ -1,8 +1,6 @@
-<div style="text-align: center">
+<div style="align: center">
     <h1> Universidad Peruana de Ciencias Aplicadas </h1>
-    <h2 style="color: lightblue"> 
-        Aplicaciones para Dispositivos Móviles
-    </h2>
+    <h2> Aplicaciones para Dispositivos Móviles</h2>
     <h3>Sección: </h3>
     <h3>Profesor: </h3>
     <h3>Task Management Group</h3>
@@ -18,9 +16,8 @@
             <th> U202217241 </th>
         </tr>
     </table>
+    <h4> 2024-02 </h4>
 </div>
-
-####  2024-02
 
 ## Contenido
 
