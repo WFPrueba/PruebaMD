@@ -1,15 +1,28 @@
-# Universidad Peruana de Ciencias Aplicadas
-## Aplicaciones para Dispositivos Móviles
-#### Sección: 
-#### Profesor:
-### Task Management Group (Nombre Provisional)
-### Workflow
-#### Integrantes:
+<div style="text-align: center">
+    <h1> Universidad Peruana de Ciencias Aplicadas </h1>
+    <h2 style="color: lightblue"> 
+        Aplicaciones para Dispositivos Móviles
+    </h2>
+    <h3>Sección: </h3>
+    <h3>Profesor: </h3>
+    <h3>Task Management Group</h3>
+    <h3>Workflow</h3>
+    <h3>Integrantes:</h3>
+    <table>
+        <tr>
+            <th> Nombre </th>
+            <th> Código </th>
+        </tr>
+        <tr>
+            <th> Neyra Santa Cruz, Marcelo Sebastian </th>
+            <th> U202217241 </th>
+        </tr>
+    </table>
+</div>
+
 ####  2024-02
 
----
 ## Contenido
----
 
 ### [1. Capítulo 1: Presentación](#cap1)
     1.1 Startup Profile
@@ -76,5 +89,28 @@
 ## Student Outcome
 Ingrese el student outcome aquí
 
- ## <a name="cap1"></a>Capítulo 1: Presentación
-1. Startup Profile
+## <a name="cap1"></a>Capítulo 1: Presentación
+<p style="text-align: justify">
+Esta es la sección de presentación. Se mostrarán todos los puntos relacionados con la descripción básica de la empresa, como los integrantes y objetivos.
+</p>
+
+### 1. Startup Profile
+<p style="text-align: justify">
+Task Management Group es una startup liderada por estudiantes de la Universidad Peruana de Ciencias Aplicadas (UPC), pertenecientes a la carrera de Ingeniería de Software. Esta incipiente empresa se especializa en el desarrollo de software y soluciones tecnológicas dirigidas a los estudiantes y a los equipos de teletrabajo (trabajo a distancia). El objetivo de la empresa es ayudar a estos individuos a alcanzar una organización adecuada de sus tareas y proyectos y, sobre todo, cumplir a sus metas. Asimismo, se sigue un modelo de aprendizaje mutuo con los clientes, para, de esa manera, poder mejorar progresivamente la calidad de atención al cliente y las herramientas que ofrece la empresa. Para ello, se ha diseñado una aplicación llamada Workflow, dedicada en su totalidad a lograr lo anteriormente planteado.
+</p>
+
+#### Misión
+<p style="text-align: justify">
+    Contribuir en la gestión y organización de proyectos y tareas de los estudiantes y equipos de teletrabajo. De esta manera, podremos facilitar el proceso de desarrollo del trabajo y, consecuentemente, aumentar la eficiencia de este
+</p>
+
+#### Visión
+<p style="text-align: justify">
+    Destacar como la plataforma líder que revoluciona la gestión eficiente de proyectos y tareas en el mercado. En Task Management, nuestro propósito es garantizar la eficiencia de la organización. Buscamos obtener el reconocimiento como el proveedor soluciones innovadoras y confiables para los estudiantes y equipos de teletrabajo en toda Lima.
+</p>
+
+#### Perfiles de los estudiantes
+| Foto de perfil | Descripción |
+|      ---       |     ---     |
+|                |             |
+
