@@ -135,7 +135,7 @@ Task Management Group es una startup liderada por estudiantes de la Universidad 
         <th colspan="2">Marcelo Sebastian Neyra Santa Cruz</th>
     </tr>
     <tr style="text-align: justify">
-        <td>Foto</td>
+        <td><img src="perfiles-marcelo.jpg" alt="Marcelo Neyra"></td>
         <td> Mi nombre es Marcelo Sebastian Neyra Santa Cruz, Actualmente estudio la carrera de ingeniería de software en la universidad de Ciencias Aplicadas – UPC. Entre mis habilidades, podemos destacar el buen uso de C++ y HTML. Me considero como una persona perseverante, trabajadora y amable. Mi sueño/meta es convertirme en un desarrollador de videojuegos en la empresa Nintendo.</td>
     </tr>
     <tr>
@@ -444,7 +444,7 @@ Para poder desarrollar adecuadamente nuestro caso, utilizaremos la técnica “5
 
 ##### <a name="segmentos-objetivos"></a> 1.2.3 Segmentos objetivo
 
-###### 1. EQUIPOS DE TELETRABAJO:
+###### 1. EQUIPOS DE TELETRABAJO: 
 Conformados por un líder y varios miembros, dispersos geográficamente y que necesiten una herramienta para coordinar, colaborar y hacer un seguimiento del progreso del proyecto de manera efectiva.
 
 ###### 2. ESTUDIANTES: 
@@ -458,12 +458,360 @@ Basándonos en un análisis de mercado, hemos reconocimos a nuestros principales
 <div style="text-align: justify">
 
 1. **Trello**
+    <p>
     Es una plataforma en línea para gestionar proyectos que emplea tarjetas para organizar y priorizar tareas. Cada tarjeta representa una tarea o proyecto y se puede colocar en listas que representan etapas del proceso como "pendiente", "en proceso" o "completado". Las tarjetas admiten descripciones, archivos, comentarios y fechas límite.
-
+    </p>
+    <img src="competidores-trello.jpg" alt="Trello Board">
 2. **Miro**
+    <p>
     Se trata de un programa de colaboración en línea empleado para generar y compartir diagramas, mapas conceptuales, presentaciones, modelos de productos y otras cosas más. Conocido anteriormente como "RealtimeBoard", Miro posibilita la colaboración en tiempo real entre equipos en un entorno de trabajo digital, sin importar dónde se encuentren geográficamente.
-
+    </p>
+    <img src="competidores-miro.jpg" alt="Miro Board">
 3. **Basecamp**
+    <p>
     Es una herramienta en línea para la gestión de proyectos que fomenta la colaboración y la eficiencia. Permite a los equipos crear proyectos y tareas, compartir archivos, mantener conversaciones y realizar un seguimiento del avance
+    </p>
+    <img src="competidor-basecamp.jpg" alt="Basecamp Board">
 </div>
 
+#### 2.1 Análisis Competitivo
+<table>
+    <tr>
+        <th colspan="6">Competitive Analysis Landscape</th>
+    </tr>
+    <tr style="text-align: justify">
+        <td colspan="2">
+            <p>¿Por qué llevan a cabo este análisis?</p>
+        </td>
+        <td colspan="4">
+            <p>El análisis lo llevamos a cabo para comparar nuestra idea de solución con otras existentes. De esta manera, podremos identificar nuestras fortalezas, debilidades, oportunidades y amenazas en relación con el mercado actual
+            </p>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2">Empresas:</td>
+        <th>Workflow</th>
+        <th>Trello</th>
+        <th>Miro</th>
+        <th>Basecamp</th>
+    </tr>
+    <tr style="text-align: justify">
+        <th rowspan="2">Perfil</th>
+        <th>Overview</th>
+        <!-- Workflow -->
+        <td>
+                Plataforma de gestión de tareas y proyectos dirigida a los equipos de teletrabajo y estudiantes. Ofrece herramientas como calendario o barra de progreso para la eficiente organización
+        </td>
+        <!-- Trello -->
+        <td>
+                Herramienta de gestión de proyectos en línea que utiliza un enfoque visual para la organización de tareas y proyectos
+        </td>
+        <!-- Miro -->
+        <td>
+                Plataforma de colaboración en línea con pizarra digital donde los usuarios pueden crear, compartir y colaborar en tiempo real
+        </td>
+        <!-- Basecamp -->
+        <td>
+                Herramienta en línea que ayuda a los equipos a administrar y organizar sus tareas y proyectos, proporcionando un espacio para compartir información
+        </td>
+    </tr>
+    <tr>
+        <th> Ventaja Competitiva ¿Qué valor ofrece a los clientes? </th>
+        <!-- Workflow -->
+        <td> 
+            Entorno de trabajo colaborativo con las herramientas necesarias para la organización 
+        </td>
+        <!-- Trello -->
+        <td> 
+            Tarjetas visuales que permiten visualizar y gestionar las actividades 
+        </td>
+        <!-- Miro -->
+        <td> 
+            Canvas intuitivo para generar presentaciones, ideas y diagramas 
+        </td>
+        <!-- Basecamp -->
+        <td>
+            Espacio de trabajo único y completo
+        </td>
+    </tr>
+    <tr>
+        <th rowspan="2">Perfil de Marketing</th>
+        <th>Mercado Objetivo</th>
+        <!-- Workflow -->
+        <td>
+            Equipos de teletrabajo y estudiantes con problemas de organización
+        </td>
+        <!-- Trello -->
+        <td> 
+            Equipos de gran tamaño que necesitan de una aplicación para la organización de sus proyectos y tareas
+        </td>
+        <!-- Miro -->
+        <td> 
+            Usuarios que necesitan de una plataforma para estructurar y plasmar su conocimiento
+        </td>
+        <!-- Basecamp -->
+        <td> 
+            Organizaciones y empresas que buscan soluciones para simplificar su trabajo remoto
+        </td>
+    </tr>
+    <tr>
+        <th>Estrategias de Marketing</th>
+        <!-- Workflow -->
+        <td>
+            Marketing digital, primordialmente redes sociales
+        </td>
+        <!-- Trello -->
+        <td> 
+            Evaluación de habilidades y experiencia por parte de profesionales del mismo campo
+        </td>
+        <!-- Miro -->
+        <td> 
+            Redes sociales y pruebas con potenciales clientes
+        </td>
+        <!-- Basecamp -->
+        <td> 
+            Evaluación de habilidades y experiencia por parte de profesionales del mismo campo
+        </td>
+    </tr>
+    <tr>
+        <th rowspan="4">Perfil de Producto</th>
+        <th>Productos y Servicios</th>
+        <!-- Workflow -->
+        <td>
+            Herramientas de comunicación, colaboración y planificación que les permita a los usuarios tener un mejor flujo de trabajo y organización
+        </td>
+        <!-- Trello -->
+        <td> 
+            Gran variedad de planes y opciones que satisfacen las necesidades de los equipos de trabajo, especialmente los más grandes
+        </td>
+        <!-- Miro -->
+        <td> 
+            Herramientas populares, como plantillas personalizables y cambio de apariencia según las necesidades del usuario
+        </td>
+        <!-- Basecamp -->
+        <td> 
+            Diferentes planes que ofrecen almacenamiento de datos, más proyectos y diversas características extra, como chat en tiempo real
+        </td>
+    </tr>
+    <tr>
+        <th rowspan="2">Precios y Costos</th>
+        <td colspan="4"> Plan gratuito con características básicas </td>
+    </tr>
+    <tr>
+    <!-- Workflow -->
+        <td>
+            <ul>
+                <li>
+                    Plan de pago por $7 mensual con características, como chat IA y almacenamiento extra
+                </li>
+                <li>
+                    Plan empresarial personalizado
+                </li>
+            </ul>
+        </td>
+        <!-- Trello -->
+        <td> 
+            Planes de pago que incluyen más funciones y almacenamiento.
+        </td>
+        <!-- Miro -->
+        <td> 
+            <ul>
+                <li>
+                    Planes de pago desde $8 mensuales que ofrecen funciones como aumentar el almacenamiento
+                </li>
+                <li>
+                    Plan empresarial personalizado
+                </li>
+            </ul>
+        </td>
+        <!-- Basecamp -->
+        <td> 
+            <ul>
+                <li>
+                    Plan de negocios que ofrece más funciones y almacenamiento para equipos de hasta 100 usuarios
+                </li>
+                <li>
+                    Plan empresarial personalizado
+                </li>
+            </ul>
+        </td>
+    </tr>
+    <tr>
+        <th>Canales de Distribución</th>
+        <!-- Workflow -->
+        <td>Móvil</td>
+        <!-- El resto -->
+        <td colspan="3"> Web y Móvil </td>
+    </tr>
+    <!-- Análisis FODA -->
+    <tr>
+        <th rowspan="4">Análisis FODA</th>
+        <th>Fortalezas</th>
+        <!--Workflow-->
+        <td>
+            La herramienta es sencilla de entender, incluso para estudiantes escolares sin experiencia previa. Es escalable para equipos de cualquier tamaño y proyecto.
+        </td>
+        <!-- Trello -->
+        <td>
+            La herramienta tiene una interfaz gráfica que es sencilla de navegar y utilizar. También, ofrece una amplia gama de funciones, como la comunicación en línea
+        </td>
+        <!-- Miro -->
+        <td>
+            La herramienta puede adaptarse a equipos de cualquier tamaño y, sin importar la complejidad de proyecto que se está desarrollando
+        </td>
+        <!-- Basecamp -->
+        <td>
+            La herramienta tiene una interfaz de usuario fácil de usar y navegar, al igual que una gran cantidad de funciones. Además, está disponible para dispositivos móviles y computadoras personales
+        </td>
+    </tr>
+    <tr>
+        <th>Debilidades</th>
+        <!--Workflow-->
+        <td>
+            Para el buen funcionamiento de la aplicación, es necesario contar con dispositivos de media o alta gama
+        </td>
+        <!-- Trello -->
+        <td>
+            <ul>
+                <li>
+                    No cuenta con una función de seguimiento de tareas.
+                </li>
+                <li>
+                    No es adecuada para proyectos complejos
+                </li>
+            </ul>
+        </td>
+        <!-- Miro -->
+        <td>
+            Algunas características tienen una curva alta de aprendizaje que pueden desmotivar al usuario en aprender su uso
+        </td>
+        <!-- Basecamp -->
+        <td>
+            No es adecuada para proyectos complejos, ya que carece de funciones importantes para proyectos de gran escala
+        </td>
+    </tr>
+    <tr>
+        <th>Oportunidades</th>
+        <!--Workflow-->
+        <td>
+            Las nuevas tecnologías nos permiten desarrollar nuevas funcionalidades para la mejor experiencia de usuario
+        </td>
+        <!-- Trello -->
+        <td>
+            Las empresas deben implementar nuevos métodos y tecnologías a su software para mantenerse en el mercado
+        </td>
+        <!-- Miro -->
+        <td>
+            El desarrollo de nueva tecnología permite que se agreguen nuevas e innovadoras funcionalidades
+        </td>
+        <!-- Basecamp -->
+        <td>
+            Las nuevas herramientas nos permiten abrirnos a nuevos mercados
+        </td>
+    </tr>
+    <tr>
+        <th>Amenazas</th>
+        <!--Workflow-->
+        <td>
+            Ser una incipiente empresa implica que los clientes desconocen de tu marca, lo que hace que sea más complicado vender tu solución de software
+        </td>
+        <!-- Trello -->
+        <td>
+            El desafío más grande de una empresa tecnológica independiente son los nuevos competidores y la falta de relación con Google
+        </td>
+        <!-- Miro -->
+        <td>
+            La industria tecnológica presenta siempre nuevos competidores, por lo que debemos estar siempre ofreciendo nuevas razones para atraer más clientes y retener a los actuales
+        </td>
+        <!-- Basecamp -->
+        <td>
+            Los desafíos más grandes son los nuevos competidores, la falta de recursos y la alta competitividad de la competencia
+        </td>
+    </tr>
+</table>
+
+#### 2.1.2 Estrategias y Tácticas frente a los competidores
+<p style="text-align: justify">
+    Nuestras estrategias incluyen la diferenciación mediante características únicas; cómo la competencia en costos; nuestro software será cómodo y accesible para nuestro segmento objetivo, la mejora de la estrategia de marketing; principalmente promocionarnos por las redes sociales, la innovación constante por medio de los comentarios, y la mejora del servicio al cliente.
+</p>
+
+### [2.2 Entrevistas](#entrevistas-need)
+<p style="text-align: justify">
+    Siguiendo la perspectiva de Easwaramoorthy y Zarinpoush (2006), las entrevistas representan una estrategia de investigación que implica el intercambio de diálogo con el propósito de adquirir datos, empleando cuestionamientos específicos para explorar en profundidad el pensamiento y la visión de la persona objeto de estudio.
+</p>
+
+#### 2.2.1. Diseño de entrevistas
+- **Segmento: Equipos de Teletrabajo**
+    Líderes de equipo de teletrabajo:
+    1. Cuéntame un poco sobre ti, ¿Cuál es tu cargo laboral?
+    2. En términos generales, ¿Cómo funciona su empresa?
+    3. ¿Cuáles son tus metas?
+    4. ¿Qué dispositivos tecnológicos, aplicaciones o marcas son los que más usas dentro de tu trabajo?
+    5. ¿Cuáles son los problemas más importantes en su trabajo?
+    6. Hemos notado que su empresa cuenta con la posibilidad de trabajar de manera remota, ¿Cómo funciona exactamente?
+    7. ¿Utiliza actualmente un software para gestionar su(s) equipo(s) remoto(s)?
+    8. ¿Tiene frecuentemente problemas de organización en sus equipos remotos, incluso con el software de gestión?
+    9. ¿Puede, normalmente, solucionar este problema en los equipos?
+    10. ¿Cree que una nueva herramienta que le permita organizar y gestionar sus equipos de teletrabajo sencillamente le sería de ayuda?
+    
+    <br>
+
+    Miembro de equipo de teletrabajo:
+    1. Cuéntame un poco sobre ti, ¿Cuál es tu cargo laboral?
+    2. En términos generales ¿De qué trata la empresa en la que trabaja?
+    3. ¿Cómo funciona exactamente el trabajo remoto en su empresa?
+    4. ¿Qué dispositivos tecnológicos son los que más usas dentro de tu trabajo?
+    5. ¿Considera que la dificultad y experiencia laboral en el trabajo remoto es similar a la del presencial?
+    6. ¿Tiene frecuentemente problemas de organización al trabajar remotamente?
+    7. ¿Puede, normalmente, solucionar estos problemas?
+    8. ¿Al trabajar remotamente es constantemente monitoreado su avance de trabajo?
+    9. ¿Su empresa utiliza un sistema o programa para gestionar el avance de su trabajo? De ser así, ¿Cómo funciona?
+    10. ¿Cree que una nueva herramienta que le permita organizar y gestionar su trabajo sencillamente le sería de ayuda?
+
+- **Segmento Objetivo: Estudiantes**
+    Estudiantes escolares y universitarios:
+    1. Cuéntame un poco sobre ti, ¿En qué grado/ciclo académico estás?
+    2. Académicamente hablando, ¿Te va bien en el colegio/universidad?
+    3. ¿Tienes o intentas seguir normalmente un horario dedicado al estudio?
+    4. ¿Cuentas con espacio acondicionado para estudiar?
+    5. ¿Utilizas algún método de estudio?
+    6. ¿Utilizas alguna herramienta para gestionar tus trabajos pendientes, como una agenda?
+    7. ¿Qué tan frecuente te ocurre que te olvides de completar una tarea?
+    8. ¿Te sientes o alguna vez te has sentido abrumado por la cantidad de trabajos y tareas que debes realizar? ¿Por qué?
+    9. ¿Usted realiza actividades no relacionadas con el estudio, como practicar deporte o trabajar? De ser así, ¿Considera que estas actividades le quitan tiempo para realizar sus deberes académicos?
+    10. ¿Crees que tu rendimiento académico mejoraría si contaras con una aplicación donde puedas gestionar tus tareas pendientes y organizar tus trabajos?
+
+#### 2.2.2. Registro de entrevistas
+Enlace del video de las entrevistas: **[Enlace del video](#)**
+##### Entrevista 1:
+    Nombre:
+    Sexo:
+    Residencia
+    Inicio:
+    Fin:
+Descripción Básica de la entrevista
+#### 2.2.3. Análisis de entrevistas
+Las entrevistas realizadas revelaron los diferentes puntos de vista de las personas sobre el trabajo a distancia. Entre los principales problemas, podemos destacar:
+
+- Asignación de tareas fuera del horario de trabajo
+
+    <p style="text-align: justify"> 
+    La falta de una persona (o grupo de personas) que administre el trabajo realizado por los empleados permite que ocurran situaciones como esta. Algunos de los entrevistados suelen recibir llamadas, mensajes, correos o encargos fuera de su horario de trabajo, por lo que no están en obligación de responder o realizar el trabajo pedido. No obstante, en numerosas ocasiones, sí lo realizan. Las razones por las que lo hacen difieren entre persona y persona. Sin embargo, en general, la razón principal es que se sienten obligados a responder para quedar bien con su jefe.
+    </p>
+
+- Aprovecharse de las limitaciones del programa de gestión
+    <p style="text-align: justify">
+    Una gran cantidad de programas de gestión actuales cuentan con diversas formas en las que el usuario, sea trabajador, administrador o jefe de equipo, puede aprovecharse de sus funcionalidades. Uno de los problemas más frecuentes, mencionados por los entrevistados, es la facilidad con la que un trabajador puede utilizar el sistema para aparentar trabajar. Por ejemplo, un empleado puede establecer una cantidad de tiempo exagerada en la planilla para un trabajo bastante sencillo.
+    </p>
+
+- Falta de comunicación con los clientes
+    <p style="text-align: justify">
+    Las aplicaciones que utilizan las empresas para contactarse con los clientes no siempre son de lo más fiables. Existen ocasiones en las que, por ejemplo, los servidores están en mantenimiento o cuentan con algún error, lo que impide la comunicación entre el empleado y el cliente. Este tipo de situaciones son bastante perjudiciales, tanto para el cliente como para el empleado, ya que el primero no obtiene la información correctamente, por lo que puede perder el interés en la conversación y podría considerar la situación como algo recurrente, por lo que dudaría sobre la fiabilidad de la empresa; mientras que el segundo podría perder a un potencial cliente (o al cliente recurrente)
+    </p>
+
+### [2.3 Needfinding](#needfinding)
+<p sytle="text-align: justify">
+    En las siguientes secciones se desarrolló todo el proceso del needfinding. El objetivo principal del needfinding es obtener una comprensión profunda y empática de los usuarios para informar el diseño de productos, servicios o experiencias que satisfagan sus necesidades de manera efectiva.
+</p>
+
+#### 2.3.1 User Personas
