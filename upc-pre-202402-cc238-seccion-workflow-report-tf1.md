@@ -66,7 +66,8 @@
     2.3.3. User Journey Mapping
     2.3.4. Empathy Mapping
     2.3.5. As-is Scenario Mapping
-    2.3.4 To-Be Scenario Mapping
+    2.3.6 Ubiquitous Language
+    2.3.7 To-Be Scenario Mapping
 #### [2.4. User Stories](#user-stories)
 #### [2.5. Impact Mapping](#impact-mapping)
 #### [2.6. Product Backlog](#product-backlog)
@@ -135,7 +136,7 @@ Task Management Group es una startup liderada por estudiantes de la Universidad 
         <th colspan="2">Marcelo Sebastian Neyra Santa Cruz</th>
     </tr>
     <tr style="text-align: justify">
-        <td><img src="perfiles-marcelo.jpg" alt="Marcelo Neyra"></td>
+        <td><img src="assets/perfiles-marcelo.jpg" alt="Marcelo Neyra"></td>
         <td> Mi nombre es Marcelo Sebastian Neyra Santa Cruz, Actualmente estudio la carrera de ingeniería de software en la universidad de Ciencias Aplicadas – UPC. Entre mis habilidades, podemos destacar el buen uso de C++ y HTML. Me considero como una persona perseverante, trabajadora y amable. Mi sueño/meta es convertirme en un desarrollador de videojuegos en la empresa Nintendo.</td>
     </tr>
     <tr>
@@ -461,17 +462,17 @@ Basándonos en un análisis de mercado, hemos reconocimos a nuestros principales
     <p>
     Es una plataforma en línea para gestionar proyectos que emplea tarjetas para organizar y priorizar tareas. Cada tarjeta representa una tarea o proyecto y se puede colocar en listas que representan etapas del proceso como "pendiente", "en proceso" o "completado". Las tarjetas admiten descripciones, archivos, comentarios y fechas límite.
     </p>
-    <img src="competidores-trello.jpg" alt="Trello Board">
+    <img src="assets/competidores-trello.jpg" alt="Trello Board">
 2. **Miro**
     <p>
     Se trata de un programa de colaboración en línea empleado para generar y compartir diagramas, mapas conceptuales, presentaciones, modelos de productos y otras cosas más. Conocido anteriormente como "RealtimeBoard", Miro posibilita la colaboración en tiempo real entre equipos en un entorno de trabajo digital, sin importar dónde se encuentren geográficamente.
     </p>
-    <img src="competidores-miro.jpg" alt="Miro Board">
+    <img src="assets/competidores-miro.jpg" alt="Miro Board">
 3. **Basecamp**
     <p>
     Es una herramienta en línea para la gestión de proyectos que fomenta la colaboración y la eficiencia. Permite a los equipos crear proyectos y tareas, compartir archivos, mantener conversaciones y realizar un seguimiento del avance
     </p>
-    <img src="competidor-basecamp.jpg" alt="Basecamp Board">
+    <img src="assets/competidor-basecamp.jpg" alt="Basecamp Board">
 </div>
 
 #### 2.1 Análisis Competitivo
@@ -815,3 +816,249 @@ Las entrevistas realizadas revelaron los diferentes puntos de vista de las perso
 </p>
 
 #### 2.3.1 User Personas
+- **Segmento Objetivo: Equipo de Teletrabajo**
+1. Líder de equipo de teletrabajo
+<img src="assets/user-persona-renzo.jpg" alt="User Persona: Renzo">
+
+2. Miembro de equipo de teletrabajo
+<img src="assets/user-persona-cielo.jpg" alt="User Persona: Cielo">
+
+- **Segmento Objetivo: Estudiante**
+1. Estudiante
+<img src="assets/user-persona-maria.jpg" alt="User Persona: Maria">
+
+#### 2.3.2 User Task Matrix
+Utilizaremos el user task matrix para organizar y priorizar las tareas que los usuarios deben poder realizar dentro de nuestro servicio.
+<!--
+    ---------Orden----------
+    Renzo Quipe Palomino
+    Cielo Rodriguez Calderon
+    Maria Pérez de la Cruz
+    ------------------------
+-->
+<table>
+    <tr>
+        <th rowspan="2">Task Matrix</th>
+        <th colspan="2">Renzo Quispe Palomino</th>
+        <th colspan="2">Cielo Rodriguez Calderon</th>
+        <th colspan="2">Maria Pérez de la Cruz</th>
+    </tr>
+    <tr>
+        <th>Frecuencia</th>
+        <th>Importancia</th>
+        <th>Frecuencia</th>
+        <th>Importancia</th>
+        <th>Frecuencia</th>
+        <th>Importancia</th>
+    </tr>
+    <tr>
+        <th>Crear Tareas</th>
+        <td>Siempre</td>
+        <td>Alta</td>
+        <td>Siempre</td>
+        <td>Alta</td>
+        <td>Siempre</td>
+        <td>Alta</td>
+    </tr>
+    <tr>
+        <th>Establecer eventos o tareas en el calendario</th>
+        <td>A veces</td>
+        <td>Media</td>
+        <td>Raramente</td>
+        <td>Baja</td>
+        <td>Siempre</td>
+        <td>Muy Alta</td>
+    </tr>
+    <tr>
+        <th>Establecer fechas límites de entregas de tareas</th>
+        <td>Siempre</td>
+        <td>Alta</td>
+        <td>A veces</td>
+        <td>Media</td>
+        <td>Siempre</td>
+        <td>Alta</td>
+    </tr>
+    <tr>
+        <th>Hacer un seguimiento de una tarea o proyecto</th>
+        <td>A veces</td>
+        <td>Alta</td>
+        <td>A veces</td>
+        <td>Alta</td>
+        <td>Siempre</td>
+        <td>Alta</td>
+    </tr>
+    <tr>
+        <th>Establecer la importancia de una tarea</th>
+        <td>A veces</td>
+        <td>Media</td>
+        <td>A veces</td>
+        <td>Media</td>
+        <td>Siempre</td>
+        <td>Alta</td>
+    </tr>
+    <tr>
+        <th>Establecer la importancia de una tarea</th>
+        <td>A veces</td>
+        <td>Media</td>
+        <td>A veces</td>
+        <td>Media</td>
+        <td>A veces</td>
+        <td>Alta</td>
+    </tr>
+    <tr>
+        <th>Marcar como cumplida las tareas</th>
+        <td>A veces</td>
+        <td>Media</td>
+        <td>A veces</td>
+        <td>Alta</td>
+        <td>Siempre</td>
+        <td>Muy Alta</td>
+    </tr>
+    <tr>
+        <th>Aplazar la fecha límite de la tarea</th>
+        <td>A veces</td>
+        <td>Media</td>
+        <td>Raramente</td>
+        <td>Baja</td>
+        <td>A veces</td>
+        <td>Media</td>
+    </tr>
+    <tr>
+        <th>Crear Proyecto</th>
+        <td>A veces</td>
+        <td>Muy Alta</td>
+        <td>Nunca</td>
+        <td>Ninguna</td>
+        <td>Nunca</td>
+        <td>Ninguna</td>
+    </tr>
+    <tr>
+        <th>Editar Detalles de Proyecto</th>
+        <td>A veces</td>
+        <td>Alta</td>
+        <td>Nunca</td>
+        <td>Ninguna</td>
+        <td>Nunca</td>
+        <td>Ninguna</td>
+    </tr>
+    <tr>
+        <th>Añadir miembros a un proyecto</th>
+        <td>A veces</td>
+        <td>Muy Alta</td>
+        <td>Nunca</td>
+        <td>Ninguna</td>
+        <td>Nunca</td>
+        <td>Ninguna</td>
+    </tr>
+    <tr>
+        <th>Visualizar Integrantes de una tarea asignada al proyecto</th>
+        <td>A veces</td>
+        <td>Alta</td>
+        <td>Nunca</td>
+        <td>Ninguna</td>
+        <td>Nunca</td>
+        <td>Ninguna</td>
+    </tr>
+</table>
+
+#### 2.3.3 User Journey Mapping
+<p style="text-align: justify">
+    La herramienta del journey mapping la utilizamos para visualizar y comprender la experiencia completa de un usuario al interactuar con nuestro servicio a lo largo del tiempo.
+</p>
+
+- **Segmento Objetivo: Equipo de Teletrabajo**
+1. Líder de equipo de teletrabajo
+<img src="assets/journey-mapping-renzo.jpg" alt="Journey Mapping: Renzo">
+
+2. Miembro de equipo de teletrabajo
+<img src="assets/journey-mapping-cielo.jpg" alt="Journey Mapping: Cielo">
+
+- **Segmento Objetivo: Estudiante**
+1. Estudiante
+<img src="assets/journey-mapping-maria.jpg" alt="Journey Mapping: Maria">
+
+#### 2.3.4 Empathy Mapping
+<p style="text-align: justify">
+    El Empathy Mapping lo desarrollamos para profundizar en la comprensión de los usuarios para poder diseñar experiencias que se ajusten mejor a sus necesidades y deseos.
+</p>
+
+- **Segmento Objetivo: Equipo de Teletrabajo**
+1. Líder de equipo de teletrabajo
+<img src="assets/empathy-mapping-renzo.jpg" alt="Empathy Mapping: Renzo">
+
+2. Miembro de equipo de teletrabajo
+<img src="assets/empathy-mapping-cielo.jpg" alt="Empathy Mapping: Cielo">
+
+- **Segmento Objetivo: Estudiante**
+1. Estudiante
+<img src="assets/empathy-mapping-maria.jpg" alt="Empathy Mapping: Maria">
+
+#### 2.3.5. As-is Scenario Mapping
+<p style="text-align: justify">
+    Los cuadros del As-Is Scenario Mapping los desarrollamos para verificar cómo es que es la situación actual con nuestros clientes y cómo podríamos mejorarla.
+</p>
+
+Enlace de cuadros realizados en Miro: **[Miro Board](https://miro.com/app/board/uXjVKWGn0ak=/?share_link_id=871702257753)**
+
+- **Segmento Objetivo: Equipo de Teletrabajo**
+1. Líder de equipo de teletrabajo
+<img src="assets/as-is-renzo.jpg" alt="AS-IS Scenario Mapping: Renzo">
+
+2. Miembro de equipo de teletrabajo
+<img src="assets/as-is-cielo.jpg" alt="AS-IS Scenario  Mapping: Cielo">
+
+- **Segmento Objetivo: Estudiante**
+1. Estudiante
+<img src="assets/as-is-maria.jpg" alt="AS-IS Scenario  Mapping: Maria">
+
+#### 2.3.6 Ubiquitous Language
+GLOSARIO:
+
+- **TEAM (Equipo):**
+    > Grupo conformado por personas que trabajan en un mismo proyecto. Contiene solo un “Team Leader” y de uno a muchos “Team Member”
+
+- **TEAM LEADER (Líder de equipo):**
+    > Representante de un “Team”. Tiene como objetivo gestionar el trabajo realizado por los “Team Member”
+
+- **TEAM MEMBER (Miembro de equipo):** 
+    > Miembro de un “Team”. Tiene como objetivo completar los trabajos y las tareas indicadas por el “Team Leader”
+
+- **PROJECT (Proyecto de trabajo):** 
+    > Entorno de trabajo que el “Team Leader” y los “Team Member” utilizan para completar un proyecto propuesto. Los “Proyect” hacen uso de los objetos “Assigment”, “Progress Bar”, “Event”, “Calendar” y “Notification”
+
+- **STUDENT (Estudiante):**
+    > Persona que actualmente se encuentra estudiando en un colegio o universidad. Tiene como objetivo completar las tareas que se encuentran en el calendario.
+
+- **ASSIGMENT (Tarea):**
+    > Asignación asociada a un “Project” que el “Team Leader” le da a uno o más “Team Member”. Un “Assigment” debe ser completado en un intervalo de tiempo especificado por el “Team Leader”. Un “Assigment”
+
+- **PROGESS BAR (Barra de progreso de tareas):** 
+    > Indicador visual que muestra la cantidad de “Assigment” completadas y “Assigment” pendientes
+
+- **EVENT (Evento):**
+    > Un “Event” es un horario designado en el “Calendar” para realizar alguna actividad, sea relacionada con un “Proyect” o no. Por ejemplo, un “Event” puede ser “Reunión con los ‘Team Member’”.
+
+- **CALENDAR (Calendario):**
+    > Un “Calendar” es un calendario que incluye visualmente las fechas de entrega de los “Assigment” y las fechas donde ocurren los “Event”
+
+- **NOTIFICATION (Notificación):**
+    > Indicador visual que muestra un mensaje en el lado superior de la pantalla por un corto lapso.
+
+- **DEADLINE (Fecha de entrega):**
+    > Un “Deadline” indica cuándo un “Assigment” debe ser entregado.
+
+#### 2.3.7 To-be Scenario Mapping
+Los cuadros del To-Be Scenario Mapping los desarrollamos para indicar cómo es que la experiencia de los usuarios mejorará cuando utilicen nuestra aplicación web.
+
+Enlace de cuadros realizados en Miro: **[Miro Board](https://miro.com/app/board/uXjVKWGn0ak=/?share_link_id=871702257753)**
+
+- **Segmento Objetivo: Equipo de Teletrabajo**
+1. Líder de equipo de teletrabajo
+<img src="assets/to-be-renzo.jpg" alt="TO-BE Scenario Mapping: Renzo">
+
+2. Miembro de equipo de teletrabajo
+<img src="assets/to-be-cielo.jpg" alt="TO-BE Scenario  Mapping: Cielo">
+
+- **Segmento Objetivo: Estudiante**
+1. Estudiante
+<img src="assets/to-be-maria.jpg" alt="TO-BE Scenario  Mapping: Maria">
