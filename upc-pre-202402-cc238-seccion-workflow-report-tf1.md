@@ -77,7 +77,7 @@
 ### [3. Capítulo 3: Arquitectura](#cap3)
 #### [3.1 Style Guidelines](#style-guidelines)
     3.1.1. General Style Guidelines
-    3.1.2. Web Style Guidelines
+    3.1.2. Mobile Style Guidelines
 #### [3.2. Information Architecture](#info-archi)
     3.2.1. Organization Systems
     3.2.2. Labeling Systems
@@ -232,7 +232,7 @@ Para poder desarrollar adecuadamente nuestro caso, utilizaremos la técnica “5
     * Referencias de clientes anteriores
     * Recomendaciones personales
     
-    Nuestros clientes podrán acceder al contenido de la aplicación a través de nuestra aplicación web Workflow
+    Nuestros clientes podrán acceder al contenido de la aplicación a través de nuestra aplicación móvil Workflow
 
 ##### El fondo (How much?)
 
@@ -1048,7 +1048,7 @@ GLOSARIO:
     > Un “Deadline” indica cuándo un “Assigment” debe ser entregado.
 
 #### 2.3.7 To-be Scenario Mapping
-Los cuadros del To-Be Scenario Mapping los desarrollamos para indicar cómo es que la experiencia de los usuarios mejorará cuando utilicen nuestra aplicación web.
+Los cuadros del To-Be Scenario Mapping los desarrollamos para indicar cómo es que la experiencia de los usuarios mejorará cuando utilicen nuestra aplicación móvil.
 
 Enlace de cuadros realizados en Miro: **[Miro Board](https://miro.com/app/board/uXjVKWGn0ak=/?share_link_id=871702257753)**
 
@@ -1062,3 +1062,485 @@ Enlace de cuadros realizados en Miro: **[Miro Board](https://miro.com/app/board/
 - **Segmento Objetivo: Estudiante**
 1. Estudiante
 <img src="assets/to-be-maria.jpg" alt="TO-BE Scenario  Mapping: Maria">
+
+### [2.4 User Stories](#user-stories)
+<table>
+    <tr>
+        <th>Story ID</th>
+        <th>Título</th>
+        <th>Descripción</th>
+        <th>Criterios de Aceptación</th>
+        <th>EPIC ID</th>
+    </tr>
+    <!--EPIC 1-->
+    <tr>
+        <td colspan="5">
+            <h5 style="text-align: center">EPIC 1: LANDING PAGE</h5>
+            <p>
+                Como visitante, quiero contar con una landing page para visualizar todas las funcionalidades que tiene la aplicación móvil que ofrece la empresa
+            </p>
+        </td>
+    </tr>
+    <tr>
+        <th>US01</th>
+        <th>Implementación de Barra de navegación</th>
+        <td>
+            <p> Como visitante </p>
+            <p> Quiero tener la opción de atravesar todas las secciones de la landing page a través de una barra de navegación </p>
+            <p> Para facilitar el acceso a la información </p>
+        </td>
+        <td>
+            <h5>Escenario 1: Traslado de una sección a otra</h5>
+                <p> Dado que el usuario se encuentra en la landing page </p>
+                <p> Cuando el usuario seleccione una de las secciones de la barra de navegación </p>
+                <p> Entonces se trasladará a la sección seleccionada </p>
+            <h5>Escenario 2: Selección de la misma sección de la landing page</h5>
+                <p> Dado que el usuario se encuentra en una sección específica de la landing page </p>
+                <p> Cuando el usuario seleccione la misma sección en la barra de navegación </p>
+                <p> Entonces la pantalla no se moverá a otra sección diferente </p>
+        </td>
+        <td>1</td>
+    </tr>
+    <tr>
+        <th> US02 </th>
+        <th> Logo y Descripción de la empresa </th>
+        <td>
+            <p> Como visitante </p>
+            <p> Quiero visualizar el logo y descripción de la empresa </p>
+            <p> Para verificar que estoy en la landing page oficial de la empresa </p>
+        </td>
+        <td>
+            <h5> Escenario 1: Visualización del Logo </h5>
+                <p> Dado que el usuario se encuentra en la landing page </p>
+                <p> Cuando el usuario seleccione “Inicio” en la barra de navegación </p>
+                <p> Entonces se trasladará al usuario a la sección del logo y descripción de la empresa </p>
+            <h5>Escenario 2: El logo no aparece</h5>
+                <p> Dado que el usuario se encuentra en una sección específica de la landing page </p>
+                <p> Cuando el usuario seleccione “Inicio” en la barra de navegación </p>
+                <p> Y el logo de la empresa no haya cargado </p>
+                <p> Entonces se trasladará al usuario a la sección del logo y descripción de la empresa </p>
+                <p> Y aparecerá solo la descripción </p>
+        </td>
+        <td>1</td>
+    </tr>
+    <tr>
+        <th>US03</th>
+        <th>Detalles y Servicios de la empresa</th>
+        <td>
+            <p> Como visitante </p>
+            <p> Quiero visualizar los detalles y servicios de la empresa </p>
+            <p> Para conocer de qué manera se puede utilizar la aplicación </p>
+        </td>
+        <td>
+            <h5>Escenario 1: Traslado a la sección servicios</h5>
+                <p> Dado que el usuario se encuentra en la landing page </p>
+                <p> Cuando el usuario seleccione “Servicios” en la barra de navegación </p>
+                <p> Entonces se trasladará al usuario a la sección de detalles de servicios </p>
+            <h5>Escenario 2: El usuario ya se encuentra en la sección servicios</h5>
+                <p> Dado que el usuario se encuentra en la sección “servicios” </p>
+                <p> Cuando el usuario seleccione “Servicios” en la barra de navegación </p>
+                <p> Entonces el sistema mantendrá al usuario en la sección seleccionada </p>
+        </td>
+        <td>1</td>
+    </tr>
+    <tr>
+        <th>US04</th>
+        <th>Clientes de la empresa</th>
+        <td>
+            <p> Como visitante </p>
+            <p> Quiero visualizar las experiencias de clientes previos de la empresa </p>
+            <p> Para es que la vida de los usuarios cambió al utilizar la aplicación </p>
+        </td>
+        <td>
+            <h5>Escenario 1: Traslado a la sección clientes</h5>
+                <p> Dado que el usuario se encuentra en la landing page </p>
+                <p> Cuando el usuario seleccione “Clientes” en la barra de navegación </p>
+                <p> Entonces se trasladará al usuario a la sección de experiencia de clientes </p>
+            <h5>Escenario 2: El usuario ya se encuentra en la sección clientes</h5>
+                <p> Dado que el usuario se encuentra en la sección “clientes” </p>
+                <p> Cuando el usuario seleccione “Clientes” en la barra de navegación </p>
+                <p> Entonces el sistema mantendrá al usuario en la sección seleccionada </p>
+        </td>
+        <td>1</td>
+    </tr>
+    <tr>
+        <th>US05</th>
+        <th>Acerca de nosotros</th>
+        <td>
+            <p> Como visitante </p>
+            <p> Quiero visualizar la misión y visión de la empresa </p>
+            <p> Para conocer qué planes tienen a futuro </p>
+        </td>
+        <td>
+            <h5>Escenario 1: Traslado a la sección Nosotros</h5>
+                <p> Dado que el usuario se encuentra en la landing page </p>
+                <p> Cuando el usuario seleccione “Acerca de Nosotros” en la barra de navegación </p>
+                <p> Entonces se trasladará al usuario a la sección de experiencia de clientes </p>
+            <h5>Escenario 2: El usuario ya se encuentra en la sección nosotros</h5>
+                <p> Dado que el usuario se encuentra en la sección “Nosotros” </p>
+                <p> Cuando el usuario seleccione “Acerca de Nosotros” en la barra de navegación </p>
+                <p> Entonces el sistema mantendrá al usuario en la sección seleccionada </p>
+        </td>
+        <td>1</td>
+    </tr>
+    <tr>
+        <th>US06</th>
+        <th>Implementación de un Footer</th>
+        <td>
+            <p> Como visitante </p>
+            <p> Quiero visualizar un Footer al final de la página </p>
+            <p> Para ver las redes sociales asociadas a la empresa </p>
+        </td>
+        <td>
+            <h5>Escenario 1: Traslado a la sección de footer</h5>
+                <p> Dado que el usuario se encuentra en la landing page </p>
+                <p> Cuando el usuario se dirija al final de la landing page </p>
+                <p> Entonces el usuario visualizará las redes sociales asociadas a la empresa </p>
+            <h5>Escenario 2: Traslado al usuario de la red social seleccionada</h5>
+                <p> Dado que el usuario se encuentra en el footer </p>
+                <p> Cuando el usuario seleccione una de íconos de las redes sociales que aparecen la sección del footer </p>
+                <p> Entonces el sistema redirigirá al usuario a la red social indicada </p>
+        </td>
+        <td>1</td>
+    </tr>
+    <tr>
+        <th>US07</th>
+        <th>Translación a la aplicación móvil</th>
+        <td>
+            <p> Como visitante </p>
+            <p> Quiero contar con un botón que me redirija a la aplicación móvil </p>
+            <p> Para tener un acceso directo y rápido a ella </p>
+        </td>
+        <td>
+            <h5>Escenario 1: Traslado a la aplicación móvil</h5>
+                <p> Dado que el usuario se encuentra en la landing page </p>
+                <p> Cuando el dé click en el botón "Probar ahora" </p>
+                <p> Entonces el sistema redirigirá al usuario a la aplicación móvil </p>
+            <h5>Escenario 2: Aplicación actualmente en mantenimiento</h5>
+                <p> Dado que el usuario se encuentra en la landing page </p>
+                <p> Cuando el dé click en el botón "Probar ahora" </p>
+                <p> Y lo servicios de la aplicación móvil estén actualmente en mantenimiento </p>
+                <p> Entonces aparecerá un mensaje, indicando que actualmente la aplicación móvil está en mantenimiento </p>
+        </td>
+        <td>1</td>
+    </tr>
+    <tr>
+        <th>TS01</th>
+        <th>Traslado a un entorno diferente</th>
+        <td>
+            <p> Como desarrollador </p>
+            <p> Quiero que el usuario pueda trasladarse libremente entre todos los entornos de la landing page </p>
+            <p> Para que el usuario pueda ver todo lo que la aplicación ofrece </p>
+        </td>
+        <td>
+            <h5>Escenario 1: Traslado exitoso</h5>
+                <p> Dado que el ENDPOINT/usuario está disponible </p>
+                <p> Cuando una solicitud GET sea enviada al presionar el botón "Probar ahora" </p>
+                <p> Entonces se recibe una respuesta con el estado 200 </p>
+                <p> Y el mensaje “Traslado Exitoso” es mostrado </p>
+                <p> Y se redirige al usuario al entorno seleccionado </p>
+            <h5>Escenario 2: Error del servidor</h5>
+                <p> Dado que el usuario se encuentra en la landing page </p>
+                <p> Cuando una solicitud GET sea enviada al presionar el botón "Probar ahora" </p>
+                <p> Y lo servicios de la aplicación móvil estén actualmente en mantenimiento </p>
+                <p> Entonces se recibe una respuesta con el estado 500 </p>
+                <p> Y el mensaje “ERROR EN EL SERVIDOR” es mostrado </p>
+        </td>
+        <td>1</td>
+    </tr>
+    <!--EPIC 2-->
+    <tr>
+        <td colspan="5">
+            <h5 style="text-align: center">EPIC 2: REGISTRO DE USUARIOS</h5>
+            <p>
+                Como usuario, quiero poder registrarme e iniciar sesión para acceder a todas las herramientas que Task Management me ofrece
+            </p>
+        </td>
+    </tr>
+    <tr>
+        <th>US01</th>
+        <th>Registro de usuario</th>
+        <td>
+            <p> Como usuario de cualquiera de los segmentos objetivos sin una cuenta en el sistema </p>
+            <p> Quiero poder registrarme en la aplicación </p>
+            <p> Para acceder a todas sus funcionalidades </p>
+        </td>
+        <td>
+            <h5>Escenario 1: Ingreso a la página "Crear una cuenta"</h5>
+                <p> Dado que el usuario se encuentra en la página "Inicio Sesión" </p>
+                <p> Cuando el usuario seleccione el botón "Crear nueva cuenta" </p>
+                <p> Entonces se redirige al usuario a la página "Crear nueva cuenta" </p>
+            <h5>Escenario 2: Registro exitoso</h5>
+                <p> Dado que el usuario se encuentra en la página “Crear nueva cuenta” </p>
+                <p> Cuando el usuario ingrese todos sus datos de registro </p>
+                <p> Entonces el sistema crea una nueva cuenta, incluyendo los datos de registro proporcionados por el usuario </p>
+                <p> Y se redirige al usuario a la página principal </p>
+            <h5>Escenario 3: Registro con datos incompletos</h5>
+                <p> Dado que el usuario se encuentra en la página “Crear nueva cuenta” </p>
+                <p> Cuando el usuario intente registrar una cuenta sin proporcionar todos los datos de registro requeridos </p>
+                <p> Entonces se muestra un mensaje de error, indicando que no puede crearse una cuenta sin haber completado todos los campos </p>
+            <h5>Escenario 4: Registro con correo electrónico ya registrado</h5>
+                <p> Dado que el usuario se encuentra en la página “Crear nueva cuenta” </p>
+                <p> Cuando el usuario ingrese una dirección de correo electrónico ya está registrada en el sistema </p>
+                <p> Entonces se muestra un mensaje de error, indicando que la dirección de correo electrónico ya está en uso </p>
+             <h5>Escenario 5: Registro con un nombre inválido</h5>
+                <p> Dado que el usuario se encuentra en la página “Crear nueva cuenta” </p>
+                <p> Cuando el usuario ingrese un nombre inválido </p>
+                <p> Entonces se muestra un mensaje de error, indicando que el nombre escrito no puede ser utilizado para crear una cuenta </p>
+        </td>
+        <td>2</td>
+    </tr>
+    <tr>
+        <th>US02</th>
+        <th>Acceso de usuario</th>
+        <td>
+            <p> Como usuario de cualquiera de los segmentos objetivos sin una cuenta en el sistema </p>
+            <p> Quiero poder iniciar sesión en la aplicación utilizando mi dirección de correo electrónico y contraseña </p>
+            <p> Para acceder a mi cuenta y utilizar todas las funcionalidades de la aplicación </p>
+        </td>
+        <td>
+            <h5>Escenario 1: Inicio de sesión exitoso</h5>
+                <p> Dado que el usuario se encuentra en la página "Inicio Sesión" </p>
+                <p> Cuando el usuario ingrese una dirección de correo electrónico que tenga una cuenta registrada en el sistema </p>
+                <p>Y el usuario ingrese la contraseña asociada al correo electrónico proporcionado</p>
+                <p> Entonces se redirige al usuario a la página principal de la aplicación </p>
+            <h5>Escenario 2: Inicio de sesión con un correo electrónico no registrado en el sistema</h5>
+                <p> Dado que el usuario se encuentra en la página “Inicio Sesión” </p>
+                <p> Cuando el usuario ingrese una dirección de correo electrónico que no tenga una cuenta registrada en el sistema </p>
+                <p> Entonces se muestra un mensaje de error, indicando que el correo o contraseña es incorrecto </p>
+            <h5>Escenario 3: Inicio de sesión con una contraseña inválida</h5>
+                <p> Dado que el usuario se encuentra en la página “Inicio Sesión” </p>
+                <p> Cuando el usuario ingrese una dirección de correo electrónico </p>
+                <p> Y una contraseña inválida</p>
+                <p> Entonces se muestra un mensaje de 1error, indicando que el correo o contraseña es incorrecto </p>
+            <h5>Escenario 4: Inicio de sesión con una cuenta desactivada</h5>
+                <p> Dado que el usuario se encuentra en la página de “Inicio Sesión” </p>
+                <p> Cuando el usuario intente iniciar sesión con una cuenta desactivada </p>
+                <p> Entonces el sistema activa automáticamente la cuenta</p>
+                <p> Y se redirige al usuario a la página principal de la aplicación</p>
+        </td>
+        <td>2</td>
+    </tr>
+    <tr>
+        <th>TS01</th>
+        <th>Registrar Usuario</th>
+        <td>
+            <p> Como desarrollador </p>
+            <p> Quiero agregar usuarios a la base de datos </p>
+            <p> Para que puedan utilizar mi aplicación </p>
+        </td>
+        <td>
+            <h5>Escenario 1: Registro de usuario exitoso</h5>
+                <p> Dado que el ENDPOINT/usuario está disponible </p>
+                <p> Cuando una solicitud POST sea enviada con los datos de nombre, edad, sexo, correo electrónico, contraseña </p>
+                <p> Entonces se recibe una respuesta con el status 201 </p>
+                <p> Y un recurso de usuario es incluido en el campo de respuestas con un nuevo ID y los datos ofrecidos por el usuario </p>
+            <h5>Escenario 2: Registro con correo electrónico ya registrado</h5>
+                <p> Dado que el ENDPOINT/usuario está disponible </p>
+                <p> Cuando una solicitud POST sea enviada con los datos de nombre, edad, sexo, correo electrónico, contraseña </p>
+                <p> Y la dirección de correo electrónico ingresada ya está registrada en el sistema </p>
+                <p> Entonces se recibe una respuesta con el status 400 </p>
+                <p> Y un mensaje con el valor “Correo ya registrado” es mostrado </p>
+            <h5>Escenario 3: Registro con datos incompletos</h5>
+                <p> Dado que el ENDPOINT/usuario está disponible </p>
+                <p> Cuando una solicitud POST sea enviada con solo algunos de los datos de nombre, edad, sexo, correo electrónico, contraseña </p>
+                <p> Entonces se recibe una respuesta con el status 400 </p>
+                <p> Y un mensaje con el valor “Faltan datos” es mostrado </p>
+            <h5>Escenario 4: Registro con un nombre de usuario prohibido</h5>
+                <p> Dado que el ENDPOINT/usuario está disponible </p>
+                <p> Cuando una solicitud POST sea enviada con los datos de nombre, edad, sexo, correo electrónico, contraseña </p>
+                <p> Y el dato nombre sea una palabra inválida </p>
+                <p> Entonces se recibe una respuesta con el status 400 </p>
+                <p> Y un mensaje con el valor “Nombre Prohibido” es mostrado </p>
+            <h5>Escenario 5: Registro con una edad inválida</h5>
+                <p> Dado que el ENDPOINT/usuario está disponible </p>
+                <p> Cuando una solicitud POST sea enviada con los datos de nombre, edad, sexo, correo electrónico, contraseña </p>
+                <p> Y el dato edad menor o igual a 0 o mayor que 130 </p>
+                <p> Entonces se recibe una respuesta con el status 400 </p>
+                <p> Y un mensaje con el valor “La edad no es número entero positivo menor a 130” es mostrado </p>
+            <h5>Escenario 6: Registro con una contraseña débil</h5>
+                <p> Dado que el ENDPOINT/usuario está disponible </p>
+                <p> Cuando una solicitud POST sea enviada con los datos de nombre, edad, sexo, correo electrónico, contraseña </p>
+                <p> Y la contraseña sea muy débil (sin al menos una letra mayúscula, una letra minúscula, un número y un carácter especial) </p>
+                <p> Entonces se recibe una respuesta con el status 400 </p>
+                <p> Y un mensaje con el valor de “La contraseña no incluye al menos una letra mayúscula, una letra minúscula, un número y un carácter especial” es mostrado </p>
+        </td>
+        <td>2</td>
+    </tr>
+    <tr>
+        <th>TS02</th>
+        <th>Acceder Usuarios</th>
+        <td>
+            <p> Como desarrollador </p>
+            <p> Quiero poder permitir el acceso a los usuarios a la aplicación móvil </p>
+            <p> Para que puedan utilizar los servicios ofrecidos por nuestra empresa </p>
+        </td>
+        <td>
+            <h5>Escenario 1: Inicio de sesión exitoso</h5>
+                <p> Dado que el ENDPOINT/usuario está disponible </p>
+                <p> Cuando una solicitud POST sea enviada con los datos de dirección de correo electrónico y contraseña que se encuentren guardados dentro de la base de datos</p>
+                <p> Entonces se recibe una respuesta con el status 202 </p>
+                <p> Y el sistema permite el acceso al usuario a la página principal </p>
+            <h5>Escenario 2: Registro con correo electrónico ya registrado</h5>
+                <p> Dado que el ENDPOINT/usuario está disponible </p>
+                <p> Cuando una solicitud POST sea enviada con los datos de dirección de correo electrónico y contraseña </p>
+                <p> Y la dirección de correo electrónico no esté guardada en la base de datos </p>
+                <p> Entonces se recibe una respuesta con el status 404 </p>
+                <p> Y un mensaje con el valor de “No existe una cuenta asociada a el correo electrónico proporcionado” es mostrado </p>
+            <h5>Escenario 3: Inicio de sesión con contraseña incorrecta</h5>
+                <p> Dado que el ENDPOINT/usuario está disponible </p>
+                <p> Cuando una solicitud POST sea enviada con los datos de dirección de correo electrónico y contraseña </p>
+                <p> Y la contraseña sea incorrecta </p>
+                <p> Entonces se recibe una respuesta con el status 400 </p>
+                <p> Y un mensaje con el valor “Datos incorrectos” es mostrado </p>
+            <h5>Escenario 4: Inicio de sesión con datos incompletos</h5>
+                <p> Dado que el ENDPOINT/usuario está disponible </p>
+                <p> Cuando una solicitud POST sea enviada con solo uno de los datos de dirección de correo electrónico y contraseña </p>
+                <p> Entonces se recibe una respuesta con el status 400 </p>
+                <p> Y un mensaje con el valor “Faltan Datos” es mostrado </p>
+        </td>
+        <td>2</td>
+    </tr>
+    <!--EPIC 3-->
+    <tr>
+        <td colspan="5">
+            <h5 style="text-align: center">EPIC 3: RECUPERACIÓN DE CONTRASEÑA</h5>
+            <p>
+                Como usuario, quiero poder recuperar mi contraseña para poder volver a ingresar a la aplicación si es que me olvido de ella
+            </p>
+        </td>
+    </tr>
+    <tr>
+        <th>US01</th>
+        <th>Recuperación de Contraseña</th>
+        <td>
+            <p> Como usuario de cualquiera de los segmentos objetivos </p>
+            <p> Quiero tener la capacidad de restablecer mi contraseña en caso de olvidarla </p>
+            <p> Para así poder acceder nuevamente a mi cuenta </p>
+        </td>
+        <td>
+            <h5>Escenario 1: Ingreso al entorno “Recuperar Contraseña”</h5>
+                <p> Dado que el usuario se encuentra en la página “Inicio sesión” </p>
+                <p> Cuando el usuario dé clic en "Olvidé mi contraseña" </p>
+                <p> Entonces se redirige al usuario al entorno “Recuperar Contraseña” </p>
+            <h5>Escenario 2: Recuperación con dirección de correo electrónico válido</h5>
+                <p> Dado que el usuario se encuentra en el entorno “Recuperar Contraseña” </p>
+                <p> Cuando el usuario escriba una dirección de correo electrónico registrada en el sistema </p>
+                <p> Entonces se muestra el entorno “Nueva Contraseña” </p>
+            <h5>Escenario 3: Recuperación con dirección de correo electrónico inválido</h5>
+                <p> Dado que el usuario se encuentra en el entorno “Recuperar Contraseña” </p>
+                <p> Cuando el usuario proporcione una dirección de correo electrónico que no se encuentra actualmente registrada en el sistema </p>
+                <p> Entonces se muestra un mensaje de error, indicando que la dirección de correo electrónico no está registrada en el sistema </p>
+            <h5>Escenario 4: Restablecimiento de contraseña exitoso</h5>
+                <p> Dado que el usuario se encuentra en la página “Nueva Contraseña” </p>
+                <p> Cuando el usuario ingresa una nueva contraseña </p>
+                <p> Entonces se muestra un mensaje de confirmación, indicando que la contraseña se ha restablecido correctamente </p>
+                <p> Y se redirige al usuario a la página “Inicio Sesión”</p>
+            <h5>Escenario 5: Restablecimiento de contraseña con la misma contraseña que la original</h5>
+                <p> Dado que el usuario se encuentra en la página “Recuperar Contraseña” </p>
+                <p> Cuando el usuario ingresa una contraseña igual a la que actualmente está utilizando </p>
+                <p> Entonces se muestra un mensaje de error, indicando que no puede cambiarse a la misma contraseña que está actualmente en uso </p>
+        </td>
+        <td>3</td>
+    </tr>
+    <tr>
+        <th>TS01</th>
+        <th>Recuperar Contraseña</th>
+        <td>
+            <p> Como desarrollador </p>
+            <p> Quiero que el sistema permita a los usuarios recuperar su contraseña </p>
+            <p> Para permitir que los usuarios tengan un método para acceder de nuevo a la aplicación si es que se han olvidado de su contraseña </p>
+        </td>
+        <td>
+            <h5>Escenario 1: Recuperación con dirección de correo electrónico válido</h5>
+                <p> Dado que el ENDPOINT/usuario está disponible </p>
+                <p> Cuando una solicitud POST sea enviada con el dato de dirección de correo electrónico </p>
+                <p> Y la dirección de correo electrónico ingresada esté registrada en el sistema </p>
+                <p> Entonces se recibe una respuesta con el status 202 </p>
+                <p> Y el sistema permite el acceso al usuario al entorno “Nueva Contraseña” </p>
+            <h5>Escenario 2: Recuperación con dirección de correo electrónico inválido</h5>
+                <p> Dado que el ENDPOINT/usuario está disponible </p>
+                <p> Cuando una solicitud POST sea enviada con el dato de dirección de correo electrónico </p>
+                <p> Y la dirección de correo electrónico ingresada no se encuentre registrada en el sistema </p>
+                <p> Entonces se recibe una respuesta con el status 401 </p>
+                <p> Y un mensaje con el valor “El correo electrónico es incorrecto” es mostrado </p>
+            <h5>Escenario 3: Restablecimiento de contraseña exitoso </h5>
+                <p> Dado que el ENDPOINT/usuario está disponible </p>
+                <p> Cuando una solicitud POST sea enviada con el dato de una nueva contraseña </p>
+                <p> Entonces se recibe una respuesta con el status 202</p>
+                <p> Y el sistema redirige al usuario a la página principal </p>
+            <h5>Escenario 4: Restablecimiento de contraseña con la misma contraseña que la original</h5>
+                <p> Dado que el ENDPOINT/usuario está disponible </p>
+                <p> Cuando una solicitud POST sea enviada con el dato de una contraseña</p>
+                <p> Y la contraseña sea la misma que la contraseña actual </p>
+                <p> Entonces se recibe una respuesta con el status 406 </p>
+                <p> Y un mensaje con el valor “La nueva contraseña coincide con la actual” es mostrado </p>
+            <h5>Escenario 5: Restablecimiento de contraseña sin proporcionar una contraseña</h5>
+                <p> Dado que el ENDPOINT/usuario está disponible </p>
+                <p> Cuando una solicitud POST sea enviada sin datos</p>
+                <p> Entonces se recibe una respuesta con el status 400 </p>
+                <p> Y un mensaje con el valor “Contraseña no proporcionada” es mostrado </p>
+        </td>
+        <td>3</td>
+    </tr>
+    <!--EPIC 4-->
+    <tr>
+        <td colspan="5">
+            <h5 style="text-align: center">EPIC 4: ELIMINACIÓN DE CUENTAS DE USUARIO</h5>
+            <p>
+                Como usuario, quiero poder eliminar mi cuenta para dejar de utilizar la aplicación de manera definitiva
+            </p>
+        </td>
+    </tr>
+    <tr>
+        <th>US01</th>
+        <th>Eliminación de cuenta</th>
+        <td>
+            <p> Como usuario de cualquiera de los segmentos objetivos </p>
+            <p> Quiero poder eliminar mi cuenta </p>
+            <p> Para asegurarme que ningún tipo de información personal se quede en la aplicación cuando desee dejar de utilizarla </p>
+        </td>
+        <td>
+            <h5>Escenario 1: Ingreso al entorno “Eliminar Cuenta”</h5>
+                <p> Dado que el usuario se encuentra en la página de “Configuración” </p>
+                <p> Cuando el usuario dé clic en “Eliminar Cuenta” </p>
+                <p> Entonces se redirige al usuario al entorno “Eliminar Cuenta” </p>
+            <h5>Escenario 2: Eliminación de Cuenta</h5>
+                <p> Dado que el usuario se encuentra en el entorno “Eliminar Cuenta” </p>
+                <p> Cuando el usuario seleccione el botón “Eliminar Cuenta” </p>
+                <p> Entonces se muestra la ventana “Eliminación Definitiva de Cuenta”, indicando que la acción no podrá ser deshecha </p>
+            <h5>Escenario 3: Confirmación de Eliminación de Cuenta</h5>
+                <p> Dado que el usuario se encuentra en la ventana “Eliminación Definitiva de Cuenta” </p>
+                <p> Cuando el usuario seleccione el botón “Eliminar Definitivamente” </p>
+                <p> Entonces se muestra un mensaje de confirmación, indicando que la cuenta ha sido eliminada </p>
+                <p> Y se redirige al usuario a la Página Principal </p>
+        </td>
+        <td>4</td>
+    </tr>
+    <tr>
+        <th>TS01</th>
+        <th>Eliminar Cuenta</th>
+        <td>
+            <p> Como desarrollador </p>
+            <p> Quiero permitir al usuario eliminar su cuenta definitivamente mediante un solo entorno </p>
+            <p> Para que sea sencillo administrar la eliminación de las cuentas </p>
+        </td>
+        <td>
+            <h5>Escenario 1: Eliminación de Cuenta</h5>
+                <p> Dado que el ENDPOINT/usuario está disponible </p>
+                <p> Cuando una solicitud DELETE sea enviada al presionar el botón “ELIMINAR DEFINITVAMENTE” </p>
+                <p> Entonces se recibe una respuesta con el status 200 </p>
+                <p> Y el sistema redirige al usuario a la Página Principal </p>
+            <h5>Escenario 2: Error al eliminar la cuenta</h5>
+                <p> Dado que el ENDPOINT/usuario está disponible </p>
+                <p> Cuando una solicitud DELETE sea enviada al presionar el botón “ELIMINAR DEFINITVAMENTE” </p>
+                <p> Y algún problema con el servidor ocurra </p>
+                <p> Entonces se recibe una respuesta con el status 400 </p>
+                <p> Y un mensaje con el valor de "Error al eliminar la cuenta" aparece </p>
+        </td>
+        <td>4</td>
+    </tr>
+</table>
+
+### [2.5. Impact Mapping](#impact-mapping)
+### [2.6. Product Backlog](#product-backlog)
