@@ -2500,7 +2500,7 @@ Enlace de cuadros realizados en Miro: **[Miro Board](https://miro.com/app/board/
     </tr>
     <tr>
         <th>US02</th>
-        <th>Cambiar Contraseña</th>
+        <th>Cambio de Contraseña</th>
         <td>
             <p> Como usuario de cualquiera de los segmentos objetivos </p>
             <p> Quiero poder cambiar mi contraseña </p>
@@ -2542,38 +2542,38 @@ Enlace de cuadros realizados en Miro: **[Miro Board](https://miro.com/app/board/
                 <p> Entonces se recibe una respuesta con el status 201 </p>
                 <p> Y el mensaje con el valor de “Datos guardados” es mostrado </p>
                 <p> Y el sistema guarda la información cambiada </p>
-            <h5>Escenario 2: Etiquetar un proyecto con una etiqueta descriptiva</h5>
+            <h5>Escenario 2: Cambio de información inválida</h5>
                 <p> Dado que el ENDPOINT/usuario está disponible </p>
-                <p> Cuando una solicitud POST sea enviada con la información del campo “Etiqueta”, que puede tener la información de nuevo, próximo, pendiente, destacado, al presionar el botón “Etiquetar” </p>
-                <p> Entonces se recibe una respuesta con el status 201 </p>
-                <p> Y el mensaje con el valor de “Etiqueta de proyecto creada” </p>
-                <p> Y el sistema crea una etiqueta con la información dada </p>
+                <p> Cuando una solicitud POST sea enviada con la información del campo los campos "Nombre", "Edad" y "Sexo", al presionar el botón “Guardar” </p>
+                <p> Y alguno de los campos presente información inválida (edad < 0, edad > 130, nombre inválido) </p>
+                <p> Entonces se recibe una respuesta con el status 400 </p>
+                <p> Y el mensaje con el valor de “Datos inválidos” es mostrado </p>
         </td>
-        <td>12</td>
+        <td>13</td>
     </tr>
     <tr>
         <th>TS02</th>
-        <th>Filtrar por Etiqueta</th>
+        <th>Cambiar contraseña</th>
         <td>
             <p> Como desarrollador </p>
-            <p> Quiero que el usuario pueda filtrar por etiquetas las tareas y proyectos </p>
-            <p> Para que se le facilite conocer qué tareas son las más importantes </p>
+            <p> Quiero permitir al usuario cambiar su contraseña actual mediante un entorno aislado del resto de los entornos </p>
+            <p> Para mantener el cambio de contraseña como un método aislado del resto que no pueda afectar ninguna de las otras funcionalidades de la aplicación </p>
         </td>
         <td>
-            <h5>Escenario 1: Filtrar tareas por una etiqueta específica</h5>
+            <h5>Escenario 1: Contraseña actual incorrecta</h5>
                 <p> Dado que el ENDPOINT/usuario está disponible </p>
-                <p> Cuando una solicitud GET sea enviada con la información del campo “Filtrar por Etiqueta” al presionar el botón “Filtrar” </p>
-                <p> Entonces se recibe una respuesta con el status 200 </p>
-                <p> Y el mensaje con el valor de “Mostrando solo las tareas que coinciden” es mostrado </p>
+                <p> Cuando una solicitud PUT sea enviada con los datos del campo “Contraseña Actual” al presionar el botón “Comprobar” </p>
+                <p> Entonces se recibe una respuesta con el status 400 </p>
+                <p> Y el mensaje “La contraseña escrita no coincide con la actual” es mostrado </p>
                 <p> Y el sistema muestra solo las tareas que están etiquetadas con la etiqueta seleccionada </p>
-            <h5>Escenario 2: Filtrar proyectos por una etiqueta específica</h5>
+            <h5>Escenario 2: Cambio de contraseña exitoso</h5>
                 <p> Dado que el ENDPOINT/usuario está disponible </p>
-                <p> Cuando una solicitud GET sea enviada con la información del campo “Filtrar por Etiqueta” al presionar el botón “Filtrar” </p>
-                <p> Entonces se recibe una respuesta con el status 200 </p>
-                <p> Y el mensaje con el valor de “Mostrando solo las tareas que coinciden” es mostrado </p>
-                <p> Y el sistema muestra solo los proyectos que están etiquetados con la etiqueta seleccionada </p>
+                <p> Cuando una solicitud PUT sea enviada con los datos de los campos “Nueva Contraseña” y “Confirmar Contraseña” al presionar el botón “Cambiar” </p>
+                <p> Entonces se recibe una respuesta con el status 202 </p>
+                <p> Y el mensaje “La contraseña ha sido cambiada” es mostrado </p>
+                <p> Y el sistema cambia la contraseña actual por la proporcionada </p>
         </td>
-        <td>12</td>
+        <td>13</td>
     </tr>
 </table>
 
