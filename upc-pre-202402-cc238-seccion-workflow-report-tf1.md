@@ -2578,4 +2578,19 @@ Enlace de cuadros realizados en Miro: **[Miro Board](https://miro.com/app/board/
 </table>
 
 ### [2.5. Impact Mapping](#impact-mapping)
+<p style="text-align: justify">
+    Impact Mapping es un método colaborativo para planificar y facilitar el desarrollo de productos o servicios. Ayuda a los equipos a enfocarse en los resultados que más importan a los usuarios y a crear un plan de acción para lograrlos.
+</p>
+
+- **Segmento Objetivo: Equipo de Teletrabajo**
+1. Líder de equipo de teletrabajo
+<img src="assets/impact-mapping-renzo.jpg" alt="Impact Mapping: Renzo">
+
+2. Miembro de equipo de teletrabajo
+<img src="assets/impact-mapping-cielo.jpg" alt="Impact Mapping: Cielo">
+
+- **Segmento Objetivo: Estudiante**
+1. Estudiante
+<img src="assets/impact-mapping-maria.jpg" alt="Impact Mapping: Maria">
+
 ### [2.6. Product Backlog](#product-backlog)
