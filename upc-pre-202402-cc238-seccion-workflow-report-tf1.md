@@ -1540,6 +1540,397 @@ Enlace de cuadros realizados en Miro: **[Miro Board](https://miro.com/app/board/
         </td>
         <td>4</td>
     </tr>
+    <!--EPIC 5-->
+    <tr>
+        <td colspan="5">
+            <h5 style="text-align: center">EPIC 5: CREACIÓN DE PROYECTOS</h5>
+            <p>
+                Como jefe de equipo, quiero poder crear un proyecto bajo mi mando y para poder encargar a los miembros de equipo sus respectivos trabajos
+            </p>
+        </td>
+    </tr>
+    <tr>
+        <th>US01</th>
+        <th>Creación de un Proyecto Nuevo</th>
+        <td>
+            <p> Como usuario del segmento objetivo de equipos de teletrabajo </p>
+            <p> Quiero poder crear un nuevo proyecto en la aplicación </p>
+            <p> Para administrar y gestionar mis labores </p>
+        </td>
+        <td>
+            <h5>Escenario 1: Acceder al entorno “Crear Proyecto”</h5>
+                <p> Dado que el jefe de equipo se encuentra en el entorno “Proyectos” </p>
+                <p> Cuando el jefe de equipo seleccione el botón “Crear Proyecto” </p>
+                <p> Entonces se le redirige al entorno “Crear Proyecto” </p>
+            <h5>Escenario 2: Creación de proyecto exitosa</h5>
+                <p> Dado que el jefe de equipo se encuentra en el entorno “Crear Proyecto” </p>
+                <p> Cuando el jefe de equipo ingrese los detalles del proyecto </p>
+                <p>Y seleccione el botón "Crear"</p>
+                <p> Entonces se crea un nuevo proyecto con los detalles proporcionados </p>
+                <p> Y se muestra un mensaje de confirmación, indicando que el proyecto fue creado satisfactoriamente </p>
+            <h5>Escenario 3: Creación de proyecto con datos incompletos</h5>
+                <p> Dado que el jefe de equipo se encuentra en el entorno “Crear Proyecto” </p>
+                <p> Cuando el jefe de equipo intenta crear un proyecto sin proporcionar todos los datos requeridos </p>
+                <p> Entonces se muestra un mensaje de error, indicando que todos los campos obligatorios deben ser completados </p>
+            <h5>Escenario 4: Creación de proyecto con nombre duplicado</h5>
+                <p> Dado que el jefe de equipo se encuentra en el entorno “Crear Proyecto” </p>
+                <p> Cuando el jefe de equipo intenta crear un proyecto con un nombre que ya existe en la aplicación </p>
+                <p> Entonces se muestra un mensaje de error, indicando que ya existe un proyecto con ese nombre </p>
+            <h5>Escenario 5: Creación de proyecto con nombre inválido</h5>
+                <p> Dado que el jefe de equipo se encuentra en el entorno “Crear Proyecto” </p>
+                <p> Cuando el jefe de equipo intente crear un nuevo proyecto con un nombre inválido </p>
+                <p> Entonces se muestra un mensaje de error, indicando que el nombre es inválido </p>
+            <h5>Escenario 6: Creación de un proyecto con duración indefinida</h5>
+                <p> Dado que el jefe de equipo se encuentra en el entorno “Crear Proyecto” </p>
+                <p> Cuando el jefe de equipo intente crear un nuevo proyecto sin fecha de inicio ni fecha de límite </p>
+                <p> Entonces se creará un nuevo proyecto, indicando en la descripción que tiene “Duración Indefinida” </p>
+        </td>
+        <td>5</td>
+    </tr>
+    <tr>
+        <th>US02</th>
+        <th>Asignación de un Miembro a un Proyecto</th>
+        <td>
+            <p> Como usuario del segmento objetivo de equipos de teletrabajo </p>
+            <p> Quiero poder asignar miembros a un proyecto </p>
+            <p> Para trabajar colaborativamente en el proyecto </p>
+        </td>
+        <td>
+            <h5>Escenario 1: Ingreso al entorno “Detalles de Proyecto”</h5>
+                <p> Dado que el jefe de equipo se encuentra en el entorno “Proyectos” </p>
+                <p> Cuando el jefe de equipo presione un proyecto existe </p>
+                <p> Entonces se redirige al usuario al entorno “Detalles de Proyecto” </p>
+            <h5>Escenario 2: Miembros disponibles para asignar a un proyecto</h5>
+                <p> Dado que el jefe de equipo se encuentra en el entorno “Detalles de Proyecto” </p>
+                <p> Cuando el jefe de equipo presiona el botón "Asignar miembros" </p>
+                <p>Entonces se muestra la lista “Usuarios Disponibles”, indicando cada usuario que puede ser asignado al proyecto seleccionado</p>
+            <h5>Escenario 3: Asignación de miembros exitosa</h5>
+                <p> Dado que el jefe de equipo se encuentra en la lista “Usuarios Disponibles” </p>
+                <p> Cuando el jefe de equipo seleccione uno o más usuarios </p>
+                <p> Y dé clic en el botón “Agregar” </p>
+                <p> Entonces los miembros seleccionados se asignan al proyecto </p>
+                <p> Y se muestra un mensaje de confirmación, indicando que los usuarios fueron agregados al proyecto satisfactoriamente </p>
+            <h5>Escenario 4: Asignación de miembro recientemente eliminado</h5>
+                <p> Dado que el jefe de equipo se encuentra en la lista “Usuarios Disponibles” </p>
+                <p> Cuando el jefe de equipo seleccione uno o más usuarios que hayan sido eliminados mientras se estaban agregando al proyecto </p>
+                <p> Y dé clic en el botón “Agregar” </p>
+                <p> Entonces aparecerá un mensaje de error, indicando que los miembros no están disponibles </p>
+        </td>
+        <td>5</td>
+    </tr>
+    <tr>
+        <th>TS01</th>
+        <th>Crear Proyecto</th>
+        <td>
+            <p> Como desarrollador </p>
+            <p> Quiero permitir al jefe de equipo crear un proyecto </p>
+            <p> Para que pueda colaborar con sus amigos y compañeros </p>
+        </td>
+        <td>
+            <h5>Escenario 1: Escenario 1: Crear Proyecto</h5>
+                <p> Dado que el ENDPOINT/usuario está disponible </p>
+                <p> Cuando una solicitud POST sea enviada con los detalles del proyecto (nombre, descripción, fecha de inicio, fecha de finalización) </p>
+                <p> Entonces se recibe una respuesta con el status 201 </p>
+                <p> Y el mensaje “Proyecto Creado” es mostrado </p>
+                <p> Y el sistema crea un proyecto </p>
+            <h5>Escenario 2: Crear proyecto con datos incompletos</h5>
+                <p> Dado que el ENDPOINT/usuario está disponible </p>
+                <p> Cuando una solicitud POST sea enviada con solo algunos de los datos requeridos </p>
+                <p> Entonces se recibe una respuesta con status 400 </p>
+                <p> Y el mensaje “Datos incompletos” es mostrado </p>
+            <h5>Escenario 3: Creación de proyecto con nombre duplicado</h5>
+                <p> Dado que el ENDPOINT/usuario está disponible </p>
+                <p> Cuando una solicitud POST sea enviada con todos los detalles del proyecto </p>
+                <p> Y ya existe un proyecto con el mismo nombre </p>
+                <p> Entonces se recibe una respuesta con status 400 </p>
+                <p> Y el mensaje “NOMBRE DUPLICADO” es mostrado </p>
+            <h5>Escenario 4: Creación de proyecto con nombre inválido</h5>
+                <p> Dado que el ENDPOINT/usuario está disponible </p>
+                <p> Cuando una solicitud POST sea enviada con todos los detalles del proyecto </p>
+                <p> Y el nombre es inválido </p>
+                <p> Entonces se recibe una respuesta con status 400 </p>
+                <p> Y el mensaje “NOMBRE INVÁLIDO” es mostrado </p>
+            <h5>Escenario 5: Creación de un proyecto con duración indefinida</h5>
+                <p> Dado que el ENDPOINT/usuario está disponible </p>
+                <p> Cuando una solicitud POST sea enviada con todos los detalles del proyecto excepto el de la duración </p>
+                <p> Entonces se recibe una respuesta con status 200 </p>
+                <p> Y el mensaje “Proyecto Creado con duración indefinida” es mostrado </p>
+                <p> Y el sistema crea un proyecto con duración indefinida </p>
+        </td>
+        <td>5</td>
+    </tr>
+    <tr>
+        <th>TS02</th>
+        <th>Agregar miembros al proyecto</th>
+        <td>
+            <p> Como desarrollador </p>
+            <p> Quiero permitir a los usuarios agregar a otros usuarios a un proyecto </p>
+            <p> Para que los usuarios puedan expandir su equipo de trabajo </p>
+        </td>
+        <td>
+            <h5>Escenario 1: Visualizar Miembros disponibles</h5>
+                <p> Dado que el ENDPOINT/usuario está disponible </p>
+                <p> Cuando una solicitud GET sea enviada al presionar botón "Asignar miembros" </p>
+                <p> Entonces se recibe una respuesta con estatus 200 </p>
+                <p> Y el mensaje “Usuarios disponibles” es mostrado </p>
+                <p> Y el sistema muestra a todos los usuarios disponibles para la asignación del proyecto </p>
+            <h5>Escenario 2: Asignación de miembros exitosa</h5>
+                <p> Dado que el ENDPOINT/usuario está disponible </p>
+                <p> Cuando una solicitud POST sea enviada al presionar el botón “Agregar” </p>
+                <p> Entonces se recibe una respuesta con el status 202 </p>
+                <p> Y el mensaje “Usuarios Agregados” es mostrado </p>
+                <p> Y el sistema asigna al proyecto a los miembros seleccionados </p>
+            <h5>Escenario 3: Asignación de miembro recientemente eliminado </h5>
+                <p> Dado que el ENDPOINT/usuario está disponible </p>
+                <p> Cuando una solicitud POST sea enviada al presionar el botón “Agregar” </p>
+                <p> Y ya existe cualquiera de los usuarios que se estaban agregando fueron eliminados </p>
+                <p> Entonces se recibe una respuesta con status 400 </p>
+                <p> Y el mensaje "Uno o más usuarios no está disponible" se muestra </p>
+        </td>
+        <td>5</td>
+    </tr>
+    <!--EPIC 6-->
+    <tr>
+        <td colspan="5">
+            <h5 style="text-align: center">EPIC 6: CREACIÓN DE TAREAS LABORALES</h5>
+            <p>
+                Como jefe de equipo, quiero poder crear tareas para que mis miembros de equipo conozcan qué trabajo deben realizar
+            </p>
+        </td>
+    </tr>
+    <tr>
+        <th>US01</th>
+        <th>Creación de un Proyecto Nuevo</th>
+        <td>
+            <p> Como usuario del segmento objetivo de equipos de teletrabajo </p>
+            <p> Quiero poder crear tareas </p>
+            <p> Para asignar a los miembros de equipo el trabajo que debe completar cada uno </p>
+        </td>
+        <td>
+            <h5>Escenario 1: Entrada al entorno “Crear tarea”</h5>
+                <p> Dado que el jefe de equipo se encuentra en el entorno “Detalles de Proyecto” </p>
+                <p> Cuando el jefe de equipo dé clic en el botón "Crear tarea" </p>
+                <p> Entonces el sistema redirige al jefe de equipo al entorno “Crear Tarea” </p>
+            <h5>Escenario 2: Creación de tarea exitosa</h5>
+                <p> Dado que el jefe de equipo se encuentra en el entorno “Crear Tarea” </p>
+                <p> Cuando el jefe de equipo llene todos los campos obligatorios de la tarea  </p>
+                <p>Y hace clic en el botón de "Crear tarea"</p>
+                <p> Entonces se crea una nueva tarea con los detalles proporcionados </p>
+                <p> Y se muestra un mensaje de confirmación, indicando que la tarea fue creada satisfactoriamente </p>
+            <h5>Escenario 3: Creación de tarea con datos incompletos</h5>
+                <p> Dado que el jefe de equipo se ubica en el entorno “Crear Tarea” </p>
+                <p> Cuando el jefe de equipo intente crear una tarea sin llenar todos los campos obligatorios </p>
+                <p> Entonces se muestra un mensaje de error, indicando que no puede crearse una tarea sin haber llenado todos los campos obligatorios </p>
+            <h5>Escenario 4: Creación de tarea con nombre duplicado</h5>
+                <p> Dado que el jefe de equipo se encuentra en el entorno “Crear Tarea” </p>
+                <p> Cuando el jefe de equipo intente crear una tarea con un nombre que ya existe en el proyecto </p>
+                <p> Entonces se muestra un mensaje de error, indicando que ya existe una tarea con ese nombre </p>
+            <h5>Escenario 5: Creación de tarea con un nombre inválido</h5>
+                <p> Dado que el jefe de equipo se encuentra en el entorno “Crear Tarea” </p>
+                <p> Cuando el jefe de equipo intente crear una tarea con un nombre inválido </p>
+                <p> Entonces se muestra un mensaje de error, indicando que no se puede crear una tarea con un nombre inválido </p>
+        </td>
+        <td>6</td>
+    </tr>
+    <tr>
+        <th>US02</th>
+        <th>Asignación de Responsabilidades a una Tarea</th>
+        <td>
+            <p> Como usuario del segmento objetivo de equipos de teletrabajo </p>
+            <p> Quiero poder asignar responsables a las tareas </p>
+            <p> Para definir el encargado de completar cada tarea del proyecto</p>
+        </td>
+        <td>
+            <h5>Escenario 1: Entrada al entorno “Tareas”</h5>
+                <p> Dado que el jefe de equipo se encuentra en el entorno “Detalles de Proyecto” </p>
+                <p> Cuando el jefe de equipo seleccione el botón “Tareas” </p>
+                <p> Entonces se redirige al jefe de equipo al entorno “Tareas” </p>
+            <h5>Escenario 2: Entrada al entorno “Detalles de tarea”</h5>
+                <p> Dado que el jefe de equipo está en el entorno “Tareas” </p>
+                <p> Cuando el jefe de equipo seleccione la opción de "Editar" </p>
+                <p>Entonces se redirige al jefe de equipo al entorno “Detalles de tarea”</p>
+            <h5>Escenario 3: Asignación de Responsable</h5>
+                <p> Dado que el jefe de equipo se encuentra en el entorno “Detalles de tarea” </p>
+                <p> Cuando el jefe de equipo seleccione el botón “Responsable” </p>
+                <p> Entonces aparecerá la lista “Responsable”, indicando todos los usuarios disponibles </p>
+            <h5>Escenario 4: Confirmación de Responsable</h5>
+                <p> Dado que el jefe de equipo se encuentra en la lista “Responsable” </p>
+                <p> Cuando el jefe de equipo elija un usuario como “Responsable” </p>
+                <p> Y de clic en “Confirmar” </p>
+                <p> Entonces se muestra un mensaje de confirmación, indicando que se ha asignado un responsable satisfactoriamente </p>
+        </td>
+        <td>6</td>
+    </tr>
+    <tr>
+        <th>TS01</th>
+        <th>Crear Tarea Laboral</th>
+        <td>
+            <p> Como desarrollador </p>
+            <p> Quiero que los jefes de equipo puedan crear tareas </p>
+            <p> Para que los miembros de equipo puedan conocer qué parte del trabajo les toca </p>
+        </td>
+        <td>
+            <h5>Escenario 1: Crear Tarea</h5>
+                <p> Dado que el ENDPOINT/usuario está disponible </p>
+                <p> Cuando una solicitud POST sea enviada con los detalles de la tarea (nombre, descripción, fecha límite) </p>
+                <p> Entonces se recibe una respuesta con el status 201 </p>
+                <p> Y el mensaje “Tarea Creada” es mostrado </p>
+                <p> Y el sistema crea una tarea </p>
+            <h5>Escenario 2: Crear tarea con datos incompletos</h5>
+                <p> Dado que el ENDPOINT/usuario está disponible </p>
+                <p> Cuando una solicitud POST sea enviada con solo algunos de los datos requeridos </p>
+                <p> Entonces se recibe una respuesta con status 400 </p>
+                <p> Y el mensaje “Datos incompletos” es mostrado </p>
+            <h5>Escenario 3: Creación de tarea con nombre duplicado</h5>
+                <p> Dado que el ENDPOINT/usuario está disponible </p>
+                <p> Cuando una solicitud POST sea enviada con todos los detalles de la tarea </p>
+                <p> Y ya existe una tarea con el mismo nombre </p>
+                <p> Entonces se recibe una respuesta con status 400 </p>
+                <p> Y el mensaje “NOMBRE DUPLICADO” es mostrado </p>
+            <h5>Escenario 4: Creación de tarea con nombre inválido</h5>
+                <p> Dado que el ENDPOINT/usuario está disponible </p>
+                <p> Cuando una solicitud POST sea enviada con todos los detalles de la tarea </p>
+                <p> Y el nombre es inválido </p>
+                <p> Entonces se recibe una respuesta con status 400 </p>
+                <p> Y el mensaje “NOMBRE INVÁLIDO” es mostrado </p>
+        </td>
+        <td>6</td>
+    </tr>
+    <tr>
+        <th>TS02</th>
+        <th>Asignar Responsable a la tarea</th>
+        <td>
+            <p> Como desarrollador </p>
+            <p> Quiero el usuario pueda asignar responsables a cada una de las tareas de un proyecto </p>
+            <p> Para que puedan los usuarios conozcan qué le toca a cada uno </p>
+        </td>
+        <td>
+            <h5>Escenario 1: Visualizar Miembros disponibles</h5>
+                <p> Dado que el ENDPOINT/usuario está disponible </p>
+                <p> Cuando una solicitud GET sea enviada al presionar botón "Asignar miembros" </p>
+                <p> Entonces se recibe una respuesta con estatus 200 </p>
+                <p> Y el mensaje “Usuarios disponibles” es mostrado </p>
+                <p> Y el sistema muestra a todos los usuarios disponibles para la asignación de la tarea</p>
+            <h5>Escenario 2: Asignación de miembros exitosa</h5>
+                <p> Dado que el ENDPOINT/usuario está disponible </p>
+                <p> Cuando una solicitud POST sea enviada al presionar el botón “Agregar” </p>
+                <p> Entonces se recibe una respuesta con el status 202 </p>
+                <p> Y el mensaje “Usuarios Agregados” es mostrado </p>
+                <p> Y el sistema asigna a la tarea los miembros seleccionados </p>
+            <h5>Escenario 3: Asignación de miembro recientemente eliminado </h5>
+                <p> Dado que el ENDPOINT/usuario está disponible </p>
+                <p> Cuando una solicitud POST sea enviada al presionar el botón “Agregar” </p>
+                <p> Y ya existe cualquiera de los usuarios que se estaban agregando fueron eliminados </p>
+                <p> Entonces se recibe una respuesta con status 400 </p>
+                <p> Y el mensaje "Uno o más usuarios no está disponible" se muestra </p>
+        </td>
+        <td>6</td>
+    </tr>
+    <!--EPIC 7-->
+    <tr>
+        <td colspan="5">
+            <h5 style="text-align: center">EPIC 6: GESTIÓN DE AVANCE DE PROYECTO</h5>
+            <p>
+                Como jefe de equipo, quiero poder gestionar todos los proyectos a mi cargo y supervisar el trabajo de los miembros para conocer su progreso
+            </p>
+        </td>
+    </tr>
+    <tr>
+        <th>US01</th>
+        <th>Actualización del estado de las tareas</th>
+        <td>
+            <p> Como usuario del segmento objetivo de equipos de teletrabajo </p>
+            <p> Quiero actualizar el estado de las tareas </p>
+            <p> Para reflejar su progreso </p>
+        </td>
+        <td>
+            <h5>Escenario 1: Actualización del estado de tarea exitosa</h5>
+                <p> Dado que el usuario se encuentra en el entorno “Detalles de tarea” </p>
+                <p> Cuando el usuario cambia el estado de la tarea de "En progreso" a "Completada" </p>
+                <p> Entonces muestra un mensaje, indicando el estado de la tarea se ha actualizado </p>
+            <h5>Escenario 2: Actualización del estado de tarea sin permisos</h5>
+                <p> Dado que el usuario se encuentra en el entorno “Detalles de tarea” de una tarea asignada a otro usuario </p>
+                <p> Cuando el usuario intente cambiar el estado de la tarea  </p>
+                <p> Entonces se muestra un mensaje, indicando que el usuario no tiene permisos para actualizar el proceso de la tarea </p>
+        </td>
+        <td>7</td>
+    </tr>
+    <tr>
+        <th>US02</th>
+        <th>Gestión de Avance del Proyecto</th>
+        <td>
+            <p> Como usuario del segmento objetivo de equipos de teletrabajo </p>
+            <p> Quiero visualizar el avance del proyecto </p>
+            <p> Para verificar que se está desarrollando los proyectos del trabajo a una velocidad adecuada </p>
+        </td>
+        <td>
+            <h5>Escenario 1: Visualización del progreso del proyecto</h5>
+                <p> Dado que el usuario se encuentra en el entorno “Detalles de Proyecto” </p>
+                <p> Cuando el usuario dé clic en el botón “Progreso” </p>
+                <p> Entonces se muestra el entorno “Progreso”, indicando las tareas pendientes y el porcentaje de avance general del proyecto </p>
+            <h5>Escenario 2: Actualización del progreso del proyecto</h5>
+                <p> Dado que el usuario se encuentra en el entorno “Progreso” </p>
+                <p> Cuando el usuario realice cambios en el estado de las tareas del proyecto </p>
+                <p>Entonces el sistema actualiza el entorno “Progreso”, mostrando los nuevos cambios realizados</p>
+            <h5>Escenario 3: Notificaciones de progreso del proyecto</h5>
+                <p> Dado que el usuario se encuentra inscrito en un proyecto </p>
+                <p> Cuando otro usuario realice algún avance importante en el progreso del proyecto </p>
+                <p> Entonces el usuario recibe una notificación, indicando que se han realizado un avance importante en el progreso del proyecto </p>
+        </td>
+        <td>7</td>
+    </tr>
+    <tr>
+        <th>TS01</th>
+        <th>Actualizar Estado de Tarea</th>
+        <td>
+            <p> Como desarrollador </p>
+            <p> Quiero que los los miembros de equipo puedan actualizar el estado de desarrollo de una tarea </p>
+            <p> Para que puedan mostrarle el avance de sus partes al jefe de equipo </p>
+        </td>
+        <td>
+            <h5>Escenario 1: Actualización de Tarea exitosa</h5>
+                <p> Dado que el ENDPOINT/usuario está disponible </p>
+                <p> Cuando una solicitud PUT sea enviada con los detalles de una tarea (nombre, descripción, fecha límite) </p>
+                <p> Entonces se recibe una respuesta con el status 201 </p>
+                <p> Y el mensaje “Tarea Actualizada” es mostrado </p>
+                <p> Y el sistema actualiza la tarea seleccionada </p>
+            <h5>Escenario 2: Actualización de Tarea sin permisos</h5>
+                <p> Dado que el ENDPOINT/usuario está disponible </p>
+                <p> Cuando una solicitud PUT sea enviada por un usuario sin permisos para la edición de una tarea </p>
+                <p> Entonces se recibe una respuesta con status 401 </p>
+                <p> Y el mensaje “No tiene permisos para actualizar la tarea” es mostrado </p>
+        </td>
+        <td>7</td>
+    </tr>
+    <tr>
+        <th>TS02</th>
+        <th>Gestionar avance del proyecto</th>
+        <td>
+            <p> Como desarrollador </p>
+            <p> Quiero que los usuarios del segmento objetivo de equipo de teletrabajo puedan visualizar y modificar el avance del proyecto </p>
+            <p> Para que puedan los usuarios conozcan cuánto se va avanzando del proyecto en cualquier momento </p>
+        </td>
+        <td>
+            <h5>Escenario 1: Visualizar progreso del Proyecto</h5>
+                <p> Dado que el ENDPOINT/usuario está disponible </p>
+                <p> Cuando una solicitud GET sea enviada al presionar botón "Detalles de Proyecto" </p>
+                <p> Entonces se recibe una respuesta con estatus 200 </p>
+                <p> Y el sistema muestra a todos las tareas pendientes </p>
+                <p> Y el sistema también muestra el porcentaje de avance general del proyecto</p>
+            <h5>Escenario 2: Actualizar el progreso del proyecto</h5>
+                <p> Dado que el ENDPOINT/usuario está disponible </p>
+                <p> Cuando una solicitud POST sea enviada al presionar al cambiar cualquiera de los elementos de un proyecto (marcar una tarea como completada, actualizar el porcentaje de avance) </p>
+                <p> Entonces se recibe una respuesta con el status 200 </p>
+                <p> Y el sistema actualiza el entorno "Progreso", mostrando los nuevos cambios realizados </p>
+            <h5>Escenario 3: Notificaciones de progreso del proyecto </h5>
+                <p> Dado que el ENDPOINT/usuario está disponible </p>
+                <p> Cuando una solicitud POST sea enviada al cambiar cualquiera de los elementos de un proyecto (marcar una tarea como completada, actualizar el porcentaje de avance) </p>
+                <p> Entonces se recibe una respuesta con status 200 </p>
+                <p> Y el mensaje "Cambios realizado en el proyecto: {proyecto}" se muestra </p>
+                <p> Y el sistema envia una notificación al usuario, indicando que se han realizado un avance importante en el progreso del proyecto </p>
+        </td>
+        <td>6</td>
+    </tr>
 </table>
 
 ### [2.5. Impact Mapping](#impact-mapping)
