@@ -1829,7 +1829,135 @@ Enlace de cuadros realizados en Miro: **[Miro Board](https://miro.com/app/board/
     <!--EPIC 7-->
     <tr>
         <td colspan="5">
-            <h5 style="text-align: center">EPIC 6: GESTIÓN DE AVANCE DE PROYECTO</h5>
+            <h5 style="text-align: center">EPIC 7: CREACIÓN DE TAREAS ACADÉMICAS</h5>
+            <p>
+                Como estudiante, quiero tener una forma de seguir las tareas que tengo pendiente para mejorar la forma en la que me ordeno para hacer las tareas diarias
+            </p>
+        </td>
+    </tr>
+    <tr>
+        <th>US01</th>
+        <th>Creación de tarea estudiantil</th>
+        <td>
+            <p> Como usuario del segmento objetivo de estudiante </p>
+            <p> Quiero  poder crear una tarea en la aplicación </p>
+            <p> Para saber qué tareas tengo pendientes </p>
+        </td>
+        <td>
+            <h5>Escenario 1: Entrada al entorno “Crear tarea”</h5>
+                <p> Dado que el estudiante se encuentra en la página del calendario </p>
+                <p> Cuando el estudiante seleccione un día dentro del calendario </p>
+                <p> Y presione la opción de "Crear tarea" </p>
+                <p> Entonces el sistema debe redirigirlo al entorno “Crear Tarea” </p>
+            <h5>Escenario 2: Creación de tarea exitosa</h5>
+                <p> Dado que el estudiante se encuentra en el entorno “Crear Tarea” </p>
+                <p> Cuando el estudiante complete todos los detalles de la tarea  </p>
+                <p>Y hace clic en el botón de "Crear tarea"</p>
+                <p> Entonces se crea una nueva tarea con los detalles proporcionados </p>
+                <p> Y se muestra un mensaje de confirmación, indicando que la tarea fue creada satisfactoriamente </p>
+            <h5>Escenario 3: Creación de tarea con datos incompletos</h5>
+                <p> Dado que el estudiante se ubica en el entorno “Crear Tarea” </p>
+                <p> Cuando el estudiante intente crear una tarea sin llenar todos los campos obligatorios </p>
+                <p> Entonces se muestra un mensaje de error, indicando que no puede crearse una tarea sin haber llenado todos los campos obligatorios </p>
+            <h5>Escenario 4: Creación de tarea con nombre duplicado en un mismo día</h5>
+                <p> Dado que el estudiante se encuentra en el entorno “Crear Tarea” </p>
+                <p> Cuando el estudiante intente crear una tarea con un nombre que ya existe en el mismo día </p>
+                <p> Entonces se muestra un mensaje de error, indicando que ya existe una tarea con ese nombre para ese día</p>
+        </td>
+        <td>7</td>
+    </tr>
+    <tr>
+        <th>US02</th>
+        <th>Actualización del progreso diario de tareas</th>
+        <td>
+            <p> Como usuario del segmento objetivo de estudiante </p>
+            <p> Quiero poder actualizar la cantidad diaria de tareas que voy completando </p>
+            <p> Para conocer mi progreso </p>
+        </td>
+        <td>
+            <h5>Escenario 1: Actualización del estado de tarea exitosa</h5>
+                <p> Dado que el estudiante se encuentra en el entorno “Tareas del día” </p>
+                <p> Cuando el estudiante cambia el estado de la tarea de "Por completar" a "Completada" </p>
+                <p> Entonces se actualiza correctamente el estado de la tarea </p>
+            <h5>Escenario 2: Entrada al entorno “Aplazar Tarea”</h5>
+                <p> Dado que el estudiante se encuentra en el entorno “Tareas del día” </p>
+                <p> Cuando el estudiante seleccione una tarea </p>
+                <p> Y presione el botón “Aplazar para otro día” </p>
+                <p> Entonces se le redirige al entorno “Aplazar Tarea” </p>
+            <h5>Escenario 3: Aplazo de Tarea</h5>
+                <p> Dado que el estudiante se encuentra en el entorno “Aplazar Tarea” </p>
+                <p> Cuando el estudiante seleccione una fecha y hora válida en la que se aplazará la tarea </p>
+                <p> Entonces saldrá un mensaje de confirmación, indicando que se aplazó la tarea </p>
+            <h5>Escenario 4: Aplazo de Tarea a una fecha inválida</h5>
+                <p> Dado que el estudiante se encuentra en el entorno “Aplazar Tarea” </p>
+                <p> Cuando el estudiante seleccione una fecha y hora menor a la fecha actual para aplazar la tarea </p>
+                <p> Entonces saldrá un mensaje de error, indicando que no es posible cambiar a una fecha pasada </p>
+        </td>
+        <td>7</td>
+    </tr>
+    <tr>
+        <th>TS01</th>
+        <th>Crear Tarea Estudiantil</th>
+        <td>
+            <p> Como desarrollador </p>
+            <p> Quiero que los estudiantes puedan crear tareas </p>
+            <p> Para que puedan conocer qué tareas deberían completar primero para que no se les acumule </p>
+        </td>
+        <td>
+            <h5>Escenario 1: Crear Tarea</h5>
+                <p> Dado que el ENDPOINT/usuario está disponible </p>
+                <p> Cuando una solicitud POST sea enviada con los detalles de la tarea (nombre, descripción, fecha límite) </p>
+                <p> Entonces se recibe una respuesta con el status 201 </p>
+                <p> Y el mensaje “Tarea Creada” es mostrado </p>
+                <p> Y el sistema crea una tarea </p>
+            <h5>Escenario 2: Crear tarea con datos incompletos</h5>
+                <p> Dado que el ENDPOINT/usuario está disponible </p>
+                <p> Cuando una solicitud POST sea enviada con solo algunos de los datos requeridos </p>
+                <p> Entonces se recibe una respuesta con status 400 </p>
+                <p> Y el mensaje “Datos incompletos” es mostrado </p>
+            <h5>Escenario 3: Creación de tarea con nombre duplicado en un mismo día</h5>
+                <p> Dado que el ENDPOINT/usuario está disponible </p>
+                <p> Cuando una solicitud POST sea enviada con todos los detalles de la tarea </p>
+                <p> Y ya existe una tarea con el mismo nombre en el mismo día </p>
+                <p> Entonces se recibe una respuesta con status 400 </p>
+                <p> Y el mensaje “NOMBRE DUPLICADO” es mostrado </p>
+        </td>
+        <td>7</td>
+    </tr>
+    <tr>
+        <th>TS02</th>
+        <th>Asignar Responsable a la tarea</th>
+        <td>
+            <p> Como desarrollador </p>
+            <p> Quiero el usuario pueda asignar responsables a cada una de las tareas de un proyecto </p>
+            <p> Para que puedan los usuarios conozcan qué le toca a cada uno </p>
+        </td>
+        <td>
+            <h5>Escenario 1: Visualizar Miembros disponibles</h5>
+                <p> Dado que el ENDPOINT/usuario está disponible </p>
+                <p> Cuando una solicitud GET sea enviada al presionar botón "Asignar miembros" </p>
+                <p> Entonces se recibe una respuesta con estatus 200 </p>
+                <p> Y el mensaje “Usuarios disponibles” es mostrado </p>
+                <p> Y el sistema muestra a todos los usuarios disponibles para la asignación de la tarea</p>
+            <h5>Escenario 2: Asignación de miembros exitosa</h5>
+                <p> Dado que el ENDPOINT/usuario está disponible </p>
+                <p> Cuando una solicitud POST sea enviada al presionar el botón “Agregar” </p>
+                <p> Entonces se recibe una respuesta con el status 202 </p>
+                <p> Y el mensaje “Usuarios Agregados” es mostrado </p>
+                <p> Y el sistema asigna a la tarea los miembros seleccionados </p>
+            <h5>Escenario 3: Asignación de miembro recientemente eliminado </h5>
+                <p> Dado que el ENDPOINT/usuario está disponible </p>
+                <p> Cuando una solicitud POST sea enviada al presionar el botón “Agregar” </p>
+                <p> Y ya existe cualquiera de los usuarios que se estaban agregando fueron eliminados </p>
+                <p> Entonces se recibe una respuesta con status 400 </p>
+                <p> Y el mensaje "Uno o más usuarios no está disponible" se muestra </p>
+        </td>
+        <td>7</td>
+    </tr>
+    <!--EPIC 8-->
+    <tr>
+        <td colspan="5">
+            <h5 style="text-align: center">EPIC 8: GESTIÓN DE AVANCE DE PROYECTO</h5>
             <p>
                 Como jefe de equipo, quiero poder gestionar todos los proyectos a mi cargo y supervisar el trabajo de los miembros para conocer su progreso
             </p>
@@ -1853,7 +1981,7 @@ Enlace de cuadros realizados en Miro: **[Miro Board](https://miro.com/app/board/
                 <p> Cuando el usuario intente cambiar el estado de la tarea  </p>
                 <p> Entonces se muestra un mensaje, indicando que el usuario no tiene permisos para actualizar el proceso de la tarea </p>
         </td>
-        <td>7</td>
+        <td>8</td>
     </tr>
     <tr>
         <th>US02</th>
@@ -1877,7 +2005,7 @@ Enlace de cuadros realizados en Miro: **[Miro Board](https://miro.com/app/board/
                 <p> Cuando otro usuario realice algún avance importante en el progreso del proyecto </p>
                 <p> Entonces el usuario recibe una notificación, indicando que se han realizado un avance importante en el progreso del proyecto </p>
         </td>
-        <td>7</td>
+        <td>8</td>
     </tr>
     <tr>
         <th>TS01</th>
@@ -1900,7 +2028,7 @@ Enlace de cuadros realizados en Miro: **[Miro Board](https://miro.com/app/board/
                 <p> Entonces se recibe una respuesta con status 401 </p>
                 <p> Y el mensaje “No tiene permisos para actualizar la tarea” es mostrado </p>
         </td>
-        <td>7</td>
+        <td>8</td>
     </tr>
     <tr>
         <th>TS02</th>
@@ -1929,7 +2057,523 @@ Enlace de cuadros realizados en Miro: **[Miro Board](https://miro.com/app/board/
                 <p> Y el mensaje "Cambios realizado en el proyecto: {proyecto}" se muestra </p>
                 <p> Y el sistema envia una notificación al usuario, indicando que se han realizado un avance importante en el progreso del proyecto </p>
         </td>
-        <td>6</td>
+        <td>8</td>
+    </tr>
+    <!--EPIC 9-->
+    <tr>
+        <td colspan="5">
+            <h5 style="text-align: center">EPIC 9: VISUALIZACIÓN DE TAREAS ACADÉMICAS EN EL CALENDARIO</h5>
+            <p>
+                Como usuario del segmento objetivo de estudiantes, quiero tener un calendario para tener un seguimiento de las tareas académicas pendientes
+            </p>
+        </td>
+    </tr>
+    <tr>
+        <th>US01</th>
+        <th>Visualización de tareas en el calendario</th>
+        <td>
+            <p> Como usuario del segmento objetivo de estudiante </p>
+            <p> Quiero poder visualizar las tareas pendientes en el calendario </p>
+            <p> Para saber cuáles son las tareas más próximas que debo completar </p>
+        </td>
+        <td>
+            <h5>Escenario 1: Ver tareas programadas en el calendario</h5>
+                <p> Dado que el estudiante se ubica en el entorno “Calendario” </p>
+                <p> Cuando el estudiante seleccione el botón “Marcar Tareas” </p>
+                <p> Entonces los días marcados en el calendario con tareas pendientes cambiarán de color, indicando que esos días se presentan las tareas </p>
+            <h5>Escenario 2: No hay tareas programadas en el calendario</h5>
+                <p> Dado que el estudiante se ubica en el entorno “Calendario” </p>
+                <p> Cuando el usuario seleccione el botón “Marcar Tareas” </p>
+                <p> Y no haya ninguna tarea en el calendario </p>
+                <p> Entonces aparecerá un mensaje, indicando que no hay tareas marcadas en el calendario </p>
+        </td>
+        <td>9</td>
+    </tr>
+    <tr>
+        <th>TS01</th>
+        <th>Visualizar tareas en el calendario</th>
+        <td>
+            <p> Como desarrollador </p>
+            <p> Quiero que los usuarios del segmento objetivo de estudiantes cuenten con una manera que puedan visualizar las tareas académicas que tengan pendientes en el calendario </p>
+            <p> Para que puedan conocer cuáles son las tareas más próximas que deben completar </p>
+        </td>
+        <td>
+            <h5>Escenario 1: Ver tareas programadas en el calendario</h5>
+                <p> Dado que ENDPOINT/ usuario está disponible </p>
+                <p> Cuando una solicitud GET sea enviada al presionar el botón "Marcar Tareas" </p>
+                <p> Entonces se recibe una respuesta con el status 200 </p> 
+                <p> Y el sistema marca con un color diferente todos los días que tengan al menos una tarea pendiente </p>
+            <h5>Escenario 2: No hay tareas programadas en el calendario</h5>
+                <p> Dado que ENDPOINT/ usuario está disponible </p>
+                <p> Cuando una solicitud GET sea enviada al presionar el botón "Marcar Tareas" </p>
+                <p> Y el sistema no detecte ninguna tarea pendiente </p>
+                <p> Entonces se recibe una respuesta con el status 400 </p> 
+                <p> Y el mensaje "No hay tareas pendientes" es mostrado </p>
+        </td>
+        <td>9</td>
+    </tr>
+    <!--EPIC 10-->
+    <tr>
+        <td colspan="5">
+            <h5 style="text-align: center">EPIC 10: EVENTOS DE CALENDARIO</h5>
+            <p>
+                Como usuario, quiero tener un calendario para tener un seguimiento de los eventos  pendientes
+            </p>
+        </td>
+    </tr>
+    <tr>
+        <th>US01</th>
+        <th>Creación de eventos de calendario</th>
+        <td>
+            <p> Como usuario de cualquiera de los segmentos objetivos </p>
+            <p>Quiero poder crear eventos en el calendario </p>
+            <p> Para programar reuniones y otros eventos relevantes para seguir correctamente el proyecto </p>
+        </td>
+        <td>
+            <h5>Escenario 1: Ingresar al entorno “Crear Evento”</h5>
+                <p> Dado que el usuario se ubica en el entorno “Calendario” </p>
+                <p> Cuando el usuario seleccione el botón “Crear Evento” </p>
+                <p> Entonces se redirige al usuario al entorno “Crear Evento” </p>
+            <h5>Escenario 2: Creación exitosa de evento en el calendario</h5>
+                <p> Dado que el usuario se ubica en el entorno “Crear Evento” </p>
+                <p> Cuando el usuario ingrese los campos obligatorios </p>
+                <p> Entonces se visualizará en el calendario el evento creado </p>
+            <h5>Escenario 3: Creación de evento de calendario con título inválido</h5>
+                <p> Dado que el usuario se ubica en el entorno "Crear evento" </p>
+                <p> Cuando el usuario ingrese los campos obligatorios </p>
+                <p> Y el título contenga una palabra inválida </p>
+                <p> Entonces aparecerá un mensaje de error, indicando que el título es inválido </p>
+            <h5> Escenario 4: Creación de evento de calendario con fecha inválida </h5>
+                <p> Dado que el usuario se ubica en el entorno "Crear evento" </p>
+                <p> Cuando el usuario ingrese los campos obligatorios </p>
+                <p> Y la fecha de cierre sea menor a la actual </p>
+                <p> Entonces aparecerá un mensaje de error, indicando la fecha es inválida </p>
+        </td>
+        <td>10</td>
+    </tr>
+    <tr>
+        <th>US02</th>
+        <th>Edición de eventos de calendario</th>
+        <td>
+            <p> Como usuario de cualquiera de los segmentos objetivos </p>
+            <p>Quiero poder editar eventos ya creados en el calendario </p>
+            <p> Para que los eventos estén siempre con la información actual </p>
+        </td>
+        <td>
+            <h5>Escenario 1: Ingresar al entorno “Editar Evento”</h5>
+                <p> Dado que el usuario se ubica en el entorno “Calendario” </p>
+                <p> Cuando el usuario dé clic en el botón “Editar Evento” </p>
+                <p> Entonces se redirige al usuario al entorno “Editar Evento” </p>
+            <h5>Escenario 2: Editar un evento existente en el calendario</h5>
+                <p> Dado que el usuario se ubica en el entorno “Editar Evento” </p>
+                <p> Cuando el usuario seleccione un evento existente en el calendario </p>
+                <p> Y el usuario cambie cualquiera de los campos obligatorios </p>
+                <p> Y de clic en "Guardar cambios" </p>
+                <p> Entonces los detalles del evento modificado se visualizarán en el calendario </p>
+            <h5>Escenario 3: Edición de evento de calendario a un título inválido</h5>
+                <p> Dado que el usuario se ubica en el entorno "Editar evento" </p>
+                <p> Cuando el usuario modifique alguno de los campos obligatorios </p>
+                <p> Y el título contenga una palabra inválida </p>
+                <p> Entonces aparecerá un mensaje de error, indicando que el título es inválido </p>
+            <h5> Escenario 4: Edición de evento de calendario con fecha inválida </h5>
+                <p> Dado que el usuario se ubica en el entorno "Editar evento" </p>
+                <p> Cuando el usuario modifique alguno de los campos obligatorios </p>
+                <p> Y la fecha de cierre sea menor a la actual </p>
+                <p> Entonces aparecerá un mensaje de error, indicando la fecha es inválida </p>
+        </td>
+        <td>10</td>
+    </tr>
+    <tr>
+        <th>US03</th>
+        <th>Eliminación de eventos de calendario</th>
+        <td>
+            <p> Como usuario de cualquiera de los segmentos objetivo </p>
+            <p>Quiero poder eliminar eventos de calendario </p>
+            <p> Para que ya no se visualize un evento en el calendario si es que fue cancelado </p>
+        </td>
+        <td>
+            <h5>Escenario 1: Ingresar al entorno “Editar Evento”</h5>
+                <p> Dado que el usuario se ubica en el entorno “Calendario” </p>
+                <p> Cuando el usuario seleccione un evento existente en el calendario</p>
+                <p> Y el usuario haga clic en “Eliminar Evento” </p>
+                <p> Entonces el evento ya no se mostrará en el calendario </p>
+            <h5>Escenario 2: Eliminar un evento en progreso</h5>
+                <p> Dado que el usuario se ubica en el entorno “Calendario” </p>
+                <p> Cuando el usuario seleccione un evento existente en el calendario que esté en progreso </p>
+                <p> Y el usuario haga clic en “Eliminar Evento” </p>
+                <p> Entonces el evento ya no se mostrará en el calendario </p>
+                <p> Y a toda persona que estaba participando en el evento le aparecerá un mensaje, indicando que el evento terminó antes </p>
+        </td>
+        <td>10</td>
+    </tr>
+    <tr>
+        <th>TS01</th>
+        <th>Crear evento de calendario</th>
+        <td>
+            <p> Como desarrollador </p>
+            <p> Quiero permitir al usuario crear un evento en el calendario </p>
+            <p> Para que otros usuarios puedan visualizar los días donde se tiene un evento importante </p>
+        </td>
+        <td>
+            <h5>Escenario 1: Crear un nuevo evento en el calendario</h5>
+                <p> Dado que el ENDPOINT/usuario está disponible </p>
+                <p> Cuando una solicitud POST sea enviada con la información de los campos de fecha, hora, título y descripción </p>
+                <p> Entonces se recibe una respuesta con el status 201 </p>
+                <p> Y el mensaje con el valor de “Evento Creado” es mostrado </p>
+                <p> Y el sistema creará un evento en el calendario en la fecha indicada </p>
+                <p> Y el sistema permitirá visualizar en el calendario el evento creado </p>
+            <h5>Escenario 2: Crear un nuevo evento en el calendario con título inválido</h5>
+                <p> Dado que el ENDPOINT/usuario está disponible </p>
+                <p> Cuando una solicitud POST sea enviada con la información de los campos de fecha, hora, título y descripción </p>
+                <p> Y el título contenga una palabra inválida </p>
+                <p> Entonces se recibe una respuesta con el status 400 </p>
+                <p> Y el mensaje con el valor de “Título inválido” es mostrado </p>
+            <h5>Escenario 3: Crear un nuevo evento en el calendario con una fecha inválida</h5>
+                <p> Dado que el ENDPOINT/usuario está disponible </p>
+                <p> Cuando una solicitud POST sea enviada con la información de los campos de fecha, hora, título y descripción </p>
+                <p> Y la fecha de cierre es menor a la actual </p>
+                <p> Entonces se recibe una respuesta con el status 400 </p>
+                <p> Y el mensaje con el valor de “Fecha inválida” es mostrado </p>
+        </td>
+        <td>10</td>
+    </tr>
+    <tr>
+        <th>TS02</th>
+        <th>Editar evento de calendario</th>
+        <td>
+            <p> Como desarrollador </p>
+            <p> Quiero permitir al usuario editar un evento en el calendario </p>
+            <p> Para que otros usuarios puedan visualizar la información más actualizada del evento de calendario </p>
+        </td>
+        <td>
+            <h5>Escenario 1: Editar un evento de calendario</h5>
+                <p> Dado que el ENDPOINT/usuario está disponible </p>
+                <p> Cuando una solicitud PUT sea enviada con la información de los campos de fecha, hora, título y descripción </p>
+                <p> Entonces se recibe una respuesta con el status 200 </p>
+                <p> Y el mensaje con el valor de “Evento Modificado” es mostrado </p>
+                <p> Y el sistema cambiará el evento el inicio y fin del evento a la fecha indicada </p>
+            <h5>Escenario 2: Editar un nuevo evento en el calendario con título inválido</h5>
+                <p> Dado que el ENDPOINT/usuario está disponible </p>
+                <p> Cuando una solicitud PUT sea enviada con la información de los campos de fecha, hora, título y descripción </p>
+                <p> Y el título contenga una palabra inválida </p>
+                <p> Entonces se recibe una respuesta con el status 400 </p>
+                <p> Y el mensaje con el valor de “Título inválido” es mostrado </p>
+            <h5>Escenario 3: Editar un nuevo evento en el calendario con una fecha inválida</h5>
+                <p> Dado que el ENDPOINT/usuario está disponible </p>
+                <p> Cuando una solicitud PUT sea enviada con la información de los campos de fecha, hora, título y descripción </p>
+                <p> Y la fecha de cierre es menor a la actual </p>
+                <p> Entonces se recibe una respuesta con el status 400 </p>
+                <p> Y el mensaje con el valor de “Fecha inválida” es mostrado </p>
+        </td>
+        <td>10</td>
+    </tr>
+    <tr>
+        <th>TS03</th>
+        <th>Eliminar evento de calendario</th>
+        <td>
+            <p> Como desarrollador </p>
+            <p> Quiero permitir al usuario eliminar un evento en el calendario </p>
+            <p> Para que los otros usuarios ya no puedan visualizar el evento de calendario cuando este se cancele </p>
+        </td>
+        <td>
+            <h5>Escenario 1: Eliminar un evento del calendario</h5>
+                <p> Dado que el ENDPOINT/usuario está disponible </p>
+                <p> Cuando una solicitud DELETE se enviada al dar clic en “ELIMINAR EVENTO” </p>
+                <p> Entonces se recibe una respuesta con el status 200 </p>
+                <p> Y el mensaje con el valor de “EVENTO ELIMINADO” es mostrado </p>
+                <p> Y el sistema elimina el evento seleccionado </p>
+                <p> Y el sistema ya no muestra el evento borrado en el calendario </p>
+            <h5>Escenario 2: Eliminar un evento del calendario en progreso</h5>
+                <p> Dado que el ENDPOINT/usuario está disponible </p>
+                <p> Cuando una solicitud DELETE se enviada al dar clic en “ELIMINAR EVENTO” </p>
+                <p> Y el evento seleccionado estaba en progreso </p>
+                <p> Entonces se recibe una respuesta con el status 200 </p>
+                <p> Y el mensaje con el valor de “EVENTO TERMINADO Y BORRADO ANTES DE TIEMPO” es mostrado </p>
+                <p> Y el sistema elimina el evento seleccionado </p>
+                <p> Y el sistema ya no muestra el evento borrado en el calendario </p>
+        </td>
+        <td>10</td>
+    </tr>
+    <!--EPIC 11-->
+    <tr>
+        <td colspan="5">
+            <h5 style="text-align: center">EPIC 11: RECORDATORIOS DE CALENDARIO</h5>
+            <p>
+                Como usuario, quiero tener un calendario para tener un seguimiento de los eventos y tareas pendientes
+            </p>
+        </td>
+    </tr>
+    <tr>
+        <th>US01</th>
+        <th>Recordatorios de Eventos de Calendario</th>
+        <td>
+            <p> Como usuario de cualquiera de los segmentos objetivos </p>
+            <p> Quiero recibir recordatorios de eventos de calendario </p>
+            <p> Para no olvidarme cuándo ocurren </p>
+        </td>
+        <td>
+            <h5>Escenario 1: Ingresar al entorno “Recordatorio”</h5>
+                <p> Dado que el usuario se ubica en el entorno “Calendario” </p>
+                <p> Cuando el usuario haga clic en “Recordatorio”</p>
+                <p> Entonces se le redirige al usuario al entorno “Recordatorio”</p>
+            <h5>Escenario 2: Configurar un recordatorio para un evento</h5>
+                <p> Dado que el usuario se ubica en el entorno “Recordatorio” </p>
+                <p> Cuando el usuario establezca un recordatorio con un intervalo de tiempo antes del evento </p>
+                <p> Entonces el usuario recibirá una notificación o recordatorio en el momento especificado </p>
+            <h5>Escenario 3: Desactivar o eliminar un recordatorio para un evento</h5>
+                <p> Dado que el usuario se ubica en el entorno “Calendario” </p>
+                <p> Cuando el usuario seleccione un recordatorio </p>
+                <p> Y el usuario haga clic en “Eliminar” </p>
+                <p> Entonces el usuario no recibirá ninguna notificación o recordatorio para ese evento </p>
+        </td>
+        <td>11</td>
+    </tr>
+    <tr>
+        <th>TS01</th>
+        <th>Crear Recordatorio de Evento de Calendario</th>
+        <td>
+            <p> Como desarrollador </p>
+            <p> Quiero que el usuario cuente con un sistema de eventos de calendario </p>
+            <p> Para que no se olvide de los eventos que están por ocurrir </p>
+        </td>
+        <td>
+            <h5>Escenario 1: Crear un recordatorio para un evento</h5>
+                <p> Dado que el ENDPOINT/usuario está disponible </p>
+                <p> Cuando una solicitud POST sea enviada con la información del campo “Intervalo”, que puede ser 30 minutos, 1 hora, 12 horas, 24 horas, al presionar el botón “Crear” </p>
+                <p> Entonces se recibe una respuesta con el status 201 </p>
+                <p> Y el mensaje con el valor de “Recordatorio creado” es mostrado </p>
+                <p> Y el sistema crea el recordatorio </p>
+            <h5>Escenario 2: Eliminar un recordatorio para un evento</h5>
+                <p> Dado que el ENDPOINT/usuario está disponible </p>
+                <p> Cuando una solicitud DELETE sea enviada al presionar el botón “Borrar recordatorio” </p>
+                <p> Entonces se recibe una respuesta con el status 200 </p>
+                <p> Y el mensaje con el valor de “RECORDATORIO BORRADO” es mostrado </p>
+                <p> Y el sistema borra el recordatorio </p>
+        </td>
+        <td>11</td>
+    </tr>
+    <!--EPIC 12-->
+    <tr>
+        <td colspan="5">
+            <h5 style="text-align: center">EPIC 12: SISTEMA DE ETIQUETADO</h5>
+            <p>
+                Como miembro del equipo, quiero tener un buscador con filtros para separar las tareas de los diferentes proyectos
+            </p>
+        </td>
+    </tr>
+    <tr>
+        <th>US01</th>
+        <th>Etiquetado de tareas y proyectos</th>
+        <td>
+            <p> Como usuario de cualquiera de los segmentos objetivos </p>
+            <p> Quiero poder etiquetar tareas y proyectos con etiquetas descriptivas </p>
+            <p> Para una mejor organización y búsqueda </p>
+        </td>
+        <td>
+            <h5>Escenario 1: Etiquetar una tarea con una etiqueta descriptiva</h5>
+                <p> Dado que el usuario está ubicado en “Detalles de tarea” </p>
+                <p> Cuando el usuario seleccione el botón “Etiquetar”</p>
+                <p> Y el usuario escriba una etiqueta descriptiva </p>
+                <p> Entonces el usuario puede visualizar la etiqueta asociada a la tarea </p>
+            <h5>Escenario 2: Etiquetar un proyecto con una etiqueta descriptiva</h5>
+                <p> Dado que el usuario está ubicado en “Detalles de proyecto” </p>
+                <p> Cuando el usuario seleccione el botón “Etiquetar” </p>
+                <p> Y el usuario elija una etiqueta descriptiva </p>
+                <p> Entonces el usuario ver la etiqueta asociada al proyecto </p>
+        </td>
+        <td>12</td>
+    </tr>
+    <tr>
+        <th>US02</th>
+        <th>Filtrado por Etiquetas</th>
+        <td>
+            <p> Como usuario de cualquiera de los segmentos objetivos </p>
+            <p> Quiero poder filtrar tareas y proyectos basándome en etiquetas </p>
+            <p> Para acceder rápidamente a los elementos relacionados </p>
+        </td>
+        <td>
+            <h5>Escenario 1: Filtrar tareas por una etiqueta específica</h5>
+                <p> Dado que el usuario está ubicado en “Detalles de tarea” </p>
+                <p> Cuando el usuario seleccione una etiqueta específica para filtrar las tareas</p>
+                <p> Entonces se muestran solo las tareas que están etiquetadas con la etiqueta seleccionada </p>
+            <h5>Escenario 2: Filtrar proyectos por una etiqueta específica</h5>
+                <p> Dado que el usuario está ubicado en “Detalles de proyecto” </p>
+                <p> Cuando el usuario seleccione una etiqueta específica para filtrar los proyectos </p>
+                <p> Entonces se muestran solo los proyectos que están etiquetados con la etiqueta seleccionada </p>
+        </td>
+        <td>12</td>
+    </tr>
+    <tr>
+        <th>TS01</th>
+        <th>Etiquetar tareas y proyectos</th>
+        <td>
+            <p> Como desarrollador </p>
+            <p> Quiero que el usuario pueda etiquetar tareas y proyectos </p>
+            <p> Para que pueda diferenciar la importancia de ellos </p>
+        </td>
+        <td>
+            <h5>Escenario 1: Etiquetar una tarea con una etiqueta descriptiva</h5>
+                <p> Dado que el ENDPOINT/usuario está disponible </p>
+                <p> Cuando una solicitud POST sea enviada con la información del campo “Etiqueta”, que puede tener la información de nuevo, próximo, pendiente, destacado, al presionar el botón “Etiquetar” </p>
+                <p> Entonces se recibe una respuesta con el status 201 </p>
+                <p> Y el mensaje con el valor de “Etiqueta de tarea creada” </p>
+                <p> Y el sistema crea una etiqueta con la información dada </p>
+            <h5>Escenario 2: Etiquetar un proyecto con una etiqueta descriptiva</h5>
+                <p> Dado que el ENDPOINT/usuario está disponible </p>
+                <p> Cuando una solicitud POST sea enviada con la información del campo “Etiqueta”, que puede tener la información de nuevo, próximo, pendiente, destacado, al presionar el botón “Etiquetar” </p>
+                <p> Entonces se recibe una respuesta con el status 201 </p>
+                <p> Y el mensaje con el valor de “Etiqueta de proyecto creada” </p>
+                <p> Y el sistema crea una etiqueta con la información dada </p>
+        </td>
+        <td>12</td>
+    </tr>
+    <tr>
+        <th>TS02</th>
+        <th>Filtrar por Etiqueta</th>
+        <td>
+            <p> Como desarrollador </p>
+            <p> Quiero que el usuario pueda filtrar por etiquetas las tareas y proyectos </p>
+            <p> Para que se le facilite conocer qué tareas son las más importantes </p>
+        </td>
+        <td>
+            <h5>Escenario 1: Filtrar tareas por una etiqueta específica</h5>
+                <p> Dado que el ENDPOINT/usuario está disponible </p>
+                <p> Cuando una solicitud GET sea enviada con la información del campo “Filtrar por Etiqueta” al presionar el botón “Filtrar” </p>
+                <p> Entonces se recibe una respuesta con el status 200 </p>
+                <p> Y el mensaje con el valor de “Mostrando solo las tareas que coinciden” es mostrado </p>
+                <p> Y el sistema muestra solo las tareas que están etiquetadas con la etiqueta seleccionada </p>
+            <h5>Escenario 2: Filtrar proyectos por una etiqueta específica</h5>
+                <p> Dado que el ENDPOINT/usuario está disponible </p>
+                <p> Cuando una solicitud GET sea enviada con la información del campo “Filtrar por Etiqueta” al presionar el botón “Filtrar” </p>
+                <p> Entonces se recibe una respuesta con el status 200 </p>
+                <p> Y el mensaje con el valor de “Mostrando solo las tareas que coinciden” es mostrado </p>
+                <p> Y el sistema muestra solo los proyectos que están etiquetados con la etiqueta seleccionada </p>
+        </td>
+        <td>12</td>
+    </tr>
+    <!--EPIC 13-->
+    <tr>
+        <td colspan="5">
+            <h5 style="text-align: center">EPIC 13: CONFIGURACIÓN PERSONAL</h5>
+            <p>
+                Como usuario registrado, poder configurar mis datos personales para que se adecuen a la información real
+            </p>
+        </td>
+    </tr>
+    <tr>
+        <th>US01</th>
+        <th>Ajuste de Datos Personales</th>
+        <td>
+            <p> Como usuario de cualquiera de los segmentos objetivos </p>
+            <p> Quiero poder ajustar mis datos personales </p>
+            <p> Para asegurarme que estén actualizados </p>
+        </td>
+        <td>
+            <h5>Escenario 1: Entrar en el entorno “Datos Personales”</h5>
+                <p> Dado que el usuario se encuentra en el entorno “Configuración” </p>
+                <p> Cuando el usuario de clic en el botón "Datos Personales” </p>
+                <p> Entonces se redirige al usuario al entorno “Datos Personales” </p>
+            <h5>Escenario 2: Configuración de Datos Personales exitosa</h5>
+                <p> Dado que el usuario se encuentra en el entorno “Datos Personales” </p>
+                <p> Cuando el usuario cambie cualquiera de los campos de los datos personales </p>
+                <p> Y hace clic en “Guardar Cambios” </p>
+                <p> Entonces aparecerá un mensaje de confirmación, indicando que se ha guardado correctamente los cambios </p>
+            <h5>Escenario 3: Cambio a un nombre de usuario prohibido</h5>
+                <p> Dado que el usuario se encuentra en el entorno “Datos Personales” </p>
+                <p> Cuando el usuario intente cambiar su nombre de usuario a un nombre de usuario prohibido </p>
+                <p> Entonces se muestra un mensaje de error, indicando que el nombre de usuario no está disponible </p>
+            <h5>Escenario 4: Cambio a una edad inválida</h5>
+                <p> Dado que el usuario se encuentra en el entorno “Datos Personales” </p>
+                <p> Cuando el usuario intente cambiar su edad a una edad menor a 0 o mayor a 130 </p>
+                <p> Entonces se muestra un mensaje de error, indicando que la edad es inválida </p>
+            <h5>Escenario 5: Guardar cambios</h5>
+                <p> Dado que el usuario se encuentra en el entorno “Datos Personales” </p>
+                <p> Cuando el usuario seleccione el botón “Guardar Cambios” </p>
+                <p> Entonces aparecerá un mensaje, indicando que se han guardado los cambios realizados </p>
+            <h5>Escenario 6: Salir sin guardar cambios</h5>
+                <p> Dado que el usuario se encuentra en el entorno “Datos Personales” </p>
+                <p> Y ha realizado algún cambio en alguna de las funciones </p>
+                <p> Cuando el usuario intente salir del entorno “Datos personales” </p>
+                <p> Entonces aparecerá un mensaje, indicando si quiere guardar o no los cambios</p>
+        </td>
+        <td>13</td>
+    </tr>
+    <tr>
+        <th>US02</th>
+        <th>Cambiar Contraseña</th>
+        <td>
+            <p> Como usuario de cualquiera de los segmentos objetivos </p>
+            <p> Quiero poder cambiar mi contraseña </p>
+            <p> Para mantener mi cuenta segura </p>
+        </td>
+        <td>
+            <h5>Escenario 1: Entrar en el entorno “Contraseña”</h5>
+                <p> Dado que el usuario se encuentra en el entorno “Configuración” </p>
+                <p> Cuando el usuario seleccione el botón "Contraseña”</p>
+                <p> Entonces se redirige al usuario al entorno “Contraseña” </p>
+            <h5>Escenario 2: Ingreso al entorno “Cambiar Contraseña”</h5>
+                <p> Dado que el usuario se encuentra en el entorno “Contraseña” </p>
+                <p> Cuando el usuario complete el campo mostrado con la contraseña actual </p>
+                <p> Entonces se redirige al usuario al entorno “Cambiar contraseña” </p>
+            <h5>Escenario 3: Contraseña incorrecta</h5>
+                <p> Dado que el usuario se encuentra en el entorno “Contraseña” </p>
+                <p> Cuando el usuario complete el campo mostrado con una contraseña diferente a la actual </p>
+                <p> Entonces se muestra un mensaje de error, indicando que la contraseña escrita no coincide con la contraseña actual </p>
+            <h5>Escenario 4: Cambio de contraseña exitoso</h5>
+                <p> Dado que el usuario se encuentra en el entorno “Cambiar contraseña” </p>
+                <p> Cuando el usuario ingrese la nueva contraseña </p>
+                <p> Y da clic en “Cambiar” </p>
+                <p> Entonces se muestra un mensaje de confirmación, indicando que se cambió la contraseña </p>
+        </td>
+        <td>13</td>
+    </tr>
+    <tr>
+        <th>TS01</th>
+        <th>Ajustar Datos Personales</th>
+        <td>
+            <p> Como desarrollador </p>
+            <p> Quiero que el usuario pueda editar sus datos personales  </p>
+            <p> Para que pueda cambiar la información de su perfil en cualquier momento </p>
+        </td>
+        <td>
+            <h5>Escenario 1: Configuración de Datos Personales exitosa</h5>
+                <p> Dado que el ENDPOINT/usuario está disponible </p>
+                <p> Cuando una solicitud POST sea enviada con la información del campo los campos "Nombre", "Edad" y "Sexo", al presionar el botón “Guardar” </p>
+                <p> Entonces se recibe una respuesta con el status 201 </p>
+                <p> Y el mensaje con el valor de “Datos guardados” es mostrado </p>
+                <p> Y el sistema guarda la información cambiada </p>
+            <h5>Escenario 2: Etiquetar un proyecto con una etiqueta descriptiva</h5>
+                <p> Dado que el ENDPOINT/usuario está disponible </p>
+                <p> Cuando una solicitud POST sea enviada con la información del campo “Etiqueta”, que puede tener la información de nuevo, próximo, pendiente, destacado, al presionar el botón “Etiquetar” </p>
+                <p> Entonces se recibe una respuesta con el status 201 </p>
+                <p> Y el mensaje con el valor de “Etiqueta de proyecto creada” </p>
+                <p> Y el sistema crea una etiqueta con la información dada </p>
+        </td>
+        <td>12</td>
+    </tr>
+    <tr>
+        <th>TS02</th>
+        <th>Filtrar por Etiqueta</th>
+        <td>
+            <p> Como desarrollador </p>
+            <p> Quiero que el usuario pueda filtrar por etiquetas las tareas y proyectos </p>
+            <p> Para que se le facilite conocer qué tareas son las más importantes </p>
+        </td>
+        <td>
+            <h5>Escenario 1: Filtrar tareas por una etiqueta específica</h5>
+                <p> Dado que el ENDPOINT/usuario está disponible </p>
+                <p> Cuando una solicitud GET sea enviada con la información del campo “Filtrar por Etiqueta” al presionar el botón “Filtrar” </p>
+                <p> Entonces se recibe una respuesta con el status 200 </p>
+                <p> Y el mensaje con el valor de “Mostrando solo las tareas que coinciden” es mostrado </p>
+                <p> Y el sistema muestra solo las tareas que están etiquetadas con la etiqueta seleccionada </p>
+            <h5>Escenario 2: Filtrar proyectos por una etiqueta específica</h5>
+                <p> Dado que el ENDPOINT/usuario está disponible </p>
+                <p> Cuando una solicitud GET sea enviada con la información del campo “Filtrar por Etiqueta” al presionar el botón “Filtrar” </p>
+                <p> Entonces se recibe una respuesta con el status 200 </p>
+                <p> Y el mensaje con el valor de “Mostrando solo las tareas que coinciden” es mostrado </p>
+                <p> Y el sistema muestra solo los proyectos que están etiquetados con la etiqueta seleccionada </p>
+        </td>
+        <td>12</td>
     </tr>
 </table>
 
